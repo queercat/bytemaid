@@ -410,6 +410,53 @@
         color: #FFFFFF;
       }
       
+      /* Prefers-reduced-motion support */
+      @media (prefers-reduced-motion: reduce) {
+        /* Stop all animations */
+        *, *::before, *::after {
+          animation-duration: 0.001ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.001ms !important;
+          scroll-behavior: auto !important;
+        }
+        
+        /* Disable DVD logo movement */
+        .dvd-logo {
+          display: none;
+        }
+        
+        /* Disable glitch effects */
+        .glitch-overlay {
+          display: none !important;
+        }
+        
+        /* Disable blinking and rotating text */
+        .ad-blink, .ad-rotate, .ad-shake, .rotate-text {
+          animation: none !important;
+        }
+        
+        /* Disable popup ads */
+        .popup-ad {
+          display: none !important;
+        }
+        
+        /* Disable marquee */
+        marquee {
+          -moz-animation: none !important;
+          -webkit-animation: none !important;
+          animation: none !important;
+          overflow: hidden;
+          white-space: nowrap;
+          display: block;
+        }
+        
+        /* Stop cube rotation */
+        .cube {
+          animation: none !important;
+          transform: rotateX(15deg) rotateY(15deg);
+        }
+      }
+      
       /* Popup ads styling */
       .popup-ad {
         position: fixed;
@@ -568,6 +615,22 @@
     <script>
       // Add DVD-style bouncing logo
       function createBouncingLogo() {
+        // Skip if reduced motion is preferred
+        if (checkReducedMotion()) {
+          // Create a static logo instead
+          const logo = document.createElement('img');
+          logo.src = 'buttmark.png';
+          logo.alt = 'Logo';
+          logo.style.position = 'fixed';
+          logo.style.bottom = '10px';
+          logo.style.right = '10px';
+          logo.style.width = '60px';
+          logo.style.height = 'auto';
+          logo.style.opacity = '0.8';
+          document.body.appendChild(logo);
+          return;
+        }
+        
         // Create the logo element
         const logo = document.createElement('img');
         logo.src = 'buttmark.png';
@@ -618,6 +681,9 @@
       
       // Create more random schizophrenic ads
       function createRandomAd() {
+        // Skip excessive animations if reduced motion is preferred
+        const reducedMotion = checkReducedMotion();
+        
         // Arrays of ad components
         const adTitles = [
           "MAID SECRETS THEY DON'T WANT YOU TO KNOW",
@@ -700,16 +766,19 @@
       
       // Create old-style ads with schizo content
       function createSchizophrenicAds() {
+        // Respect reduced motion preference
+        const reducedMotion = checkReducedMotion();
+        
         // Create left sidebar ad
         const leftAd = document.createElement('div');
         leftAd.className = 'ad-sidebar ad-left';
         leftAd.innerHTML = `
-          <div class="ad-title ad-blink">MAID SECRETS THEY DON'T WANT YOU TO KNOW</div>
+          <div class="ad-title ${!reducedMotion ? 'ad-blink' : ''}">MAID SECRETS THEY DON'T WANT YOU TO KNOW</div>
           <div class="ad-content">
             <img src="buttmark.png" class="ad-image" alt="Maid Secret">
-            <p class="ad-rotate">BYTEMAID CLEANS YOUR CACHE IN 4 DIMENSIONS SIMULTANEOUSLY</p>
+            <p class="${!reducedMotion ? 'ad-rotate' : ''}">BYTEMAID CLEANS YOUR CACHE IN 4 DIMENSIONS SIMULTANEOUSLY</p>
             <p>ACADEMIA HIDES THIS TRUTH!</p>
-            <div class="ad-button ad-shake">LEARN MORE</div>
+            <div class="ad-button ${!reducedMotion ? 'ad-shake' : ''}">LEARN MORE</div>
           </div>
         `;
         document.body.appendChild(leftAd);
@@ -721,7 +790,7 @@
           <div class="ad-title" style="color: #00FF00;">LOCAL MAIDS IN YOUR AREA</div>
           <div class="ad-content">
             <img src="buttmark.png" class="ad-image" alt="Local Maid">
-            <p class="ad-blink">BYTEMAID WANTS TO CLEAN YOUR HARD DRIVE</p>
+            <p class="${!reducedMotion ? 'ad-blink' : ''}">BYTEMAID WANTS TO CLEAN YOUR HARD DRIVE</p>
             <p>4-CORNER SIMULTANEOUS MAID ALGORITHM</p>
             <div class="ad-button">CLICK NOW!!!</div>
           </div>
@@ -766,6 +835,11 @@
       
       // Create popup ads that appear randomly
       function createPopupAd() {
+        // Skip if reduced motion is preferred
+        if (checkReducedMotion()) {
+          return;
+        }
+        
         // Arrays of popup components
         const popupTitles = [
           "⚠️ WARNING: MAID PROTOCOL BREACH DETECTED",
@@ -850,6 +924,9 @@
       
       // Create cookie banner with dynamically rewriting schizo ramblings
       function createCookieBanner() {
+        // Skip if reduced motion is preferred
+        const reducedMotion = checkReducedMotion();
+        
         // Create the cookie banner element
         const cookieBanner = document.createElement('div');
         cookieBanner.className = 'cookie-banner';
@@ -913,7 +990,7 @@
         updateCookieText();
         
         // Set interval to update text
-        const textInterval = setInterval(updateCookieText, 8000); // Change text every 8 seconds
+        const textInterval = setInterval(updateCookieText, reducedMotion ? 0 : 8000); // Change text every 8 seconds, or never if reduced motion
         
         // Add event listeners to buttons
         acceptButton.addEventListener('click', function() {
@@ -942,11 +1019,23 @@
       // Generate random icon on page load
       window.onload = function() {
         generateRandomIcon();
-        setInterval(changeRandomTextColors, 500);
+        
+        // Check for reduced motion preference
+        const reducedMotion = checkReducedMotion();
+        
+        // Set up color changing with respect to reduced motion
+        if (!reducedMotion) {
+          setInterval(changeRandomTextColors, 500);
+        } else {
+          // Apply colors once without animation
+          changeRandomTextColors();
+        }
         
         // Start generating schizophrenic console messages
         generateSchizophrenicMessages();
-        setInterval(generateSchizophrenicMessages, 800); // New message every 800ms
+        if (!reducedMotion) {
+          setInterval(generateSchizophrenicMessages, 800); // New message every 800ms
+        }
         
         // Load and distort Bytemaid images
         fetchAndDistortBytemaidImages();
@@ -960,17 +1049,19 @@
         // Create cookie banner
         createCookieBanner();
         
-        // Schedule random popup ads
-        setTimeout(() => {
-          createPopupAd();
-          
-          // Create random popups periodically
-          setInterval(() => {
-            if (Math.random() < 0.3) { // 30% chance every 20-40 seconds
-              createPopupAd();
-            }
-          }, Math.random() * 20000 + 20000);
-        }, 15000); // First popup after 15 seconds
+        // Schedule random popup ads if motion is not reduced
+        if (!reducedMotion) {
+          setTimeout(() => {
+            createPopupAd();
+            
+            // Create random popups periodically
+            setInterval(() => {
+              if (Math.random() < 0.3) { // 30% chance every 20-40 seconds
+                createPopupAd();
+              }
+            }, Math.random() * 20000 + 20000);
+          }, 15000); // First popup after 15 seconds
+        }
         
         // Add CSS for the glitch container
         document.head.insertAdjacentHTML('beforeend', `
@@ -1213,6 +1304,9 @@
       
       // Fetch and distort Bytemaid images from the API
       function fetchAndDistortBytemaidImages() {
+        // Respect reduced motion preference
+        const reducedMotion = checkReducedMotion();
+        
         fetch('https://derpibooru.org/api/v1/json/search/images?q=oc:bytewave,%20safe,maid')
           .then(response => response.json())
           .then(data => {
@@ -1264,23 +1358,25 @@
                 glitchWrapper.appendChild(img);
                 
                 // Create glitch overlays
-                for (let i = 0; i < 3; i++) {
-                  const overlay = document.createElement('div');
-                  overlay.className = 'glitch-overlay';
-                  overlay.style.position = 'absolute';
-                  overlay.style.top = '0';
-                  overlay.style.left = '0';
-                  overlay.style.width = '100%';
-                  overlay.style.height = '100%';
-                  overlay.style.backgroundImage = `url(${image.view_url})`;
-                  overlay.style.backgroundSize = 'cover';
-                  overlay.style.backgroundPosition = 'center';
-                  overlay.style.opacity = '0.5';
-                  overlay.style.mixBlendMode = getRandomBlendMode();
-                  overlay.style.filter = getRandomFilter();
-                  overlay.style.animation = `glitch-anim-${i+1} ${Math.random() * 2 + 1}s infinite alternate-reverse`;
-                  
-                  glitchWrapper.appendChild(overlay);
+                if (!reducedMotion) {
+                  for (let i = 0; i < 3; i++) {
+                    const overlay = document.createElement('div');
+                    overlay.className = 'glitch-overlay';
+                    overlay.style.position = 'absolute';
+                    overlay.style.top = '0';
+                    overlay.style.left = '0';
+                    overlay.style.width = '100%';
+                    overlay.style.height = '100%';
+                    overlay.style.backgroundImage = `url(${image.view_url})`;
+                    overlay.style.backgroundSize = 'cover';
+                    overlay.style.backgroundPosition = 'center';
+                    overlay.style.opacity = '0.5';
+                    overlay.style.mixBlendMode = getRandomBlendMode();
+                    overlay.style.filter = getRandomFilter();
+                    overlay.style.animation = `glitch-anim-${i+1} ${Math.random() * 2 + 1}s infinite alternate-reverse`;
+                    
+                    glitchWrapper.appendChild(overlay);
+                  }
                 }
                 
                 // Add a random text overlay
@@ -1302,20 +1398,22 @@
                 glitchContainer.appendChild(glitchWrapper);
                 
                 // Set up animation to periodically change filters
-                setInterval(() => {
-                  applyRandomFilters(img);
-                  
-                  // Update overlays
-                  const overlays = glitchWrapper.querySelectorAll('.glitch-overlay');
-                  overlays.forEach(overlay => {
-                    overlay.style.mixBlendMode = getRandomBlendMode();
-                    overlay.style.filter = getRandomFilter();
-                  });
-                  
-                  // Update text
-                  textOverlay.textContent = getRandomBytemaidPhrase();
-                  textOverlay.style.color = getRandomColor();
-                }, Math.random() * 2000 + 1000);
+                if (!reducedMotion) {
+                  setInterval(() => {
+                    applyRandomFilters(img);
+                    
+                    // Update overlays
+                    const overlays = glitchWrapper.querySelectorAll('.glitch-overlay');
+                    overlays.forEach(overlay => {
+                      overlay.style.mixBlendMode = getRandomBlendMode();
+                      overlay.style.filter = getRandomFilter();
+                    });
+                    
+                    // Update text
+                    textOverlay.textContent = getRandomBytemaidPhrase();
+                    textOverlay.style.color = getRandomColor();
+                  }, Math.random() * 2000 + 1000);
+                }
               });
               
               // Add the container to the page before the warning div
@@ -1330,9 +1428,19 @@
             console.error('Error fetching Bytemaid images:', error);
           });
       }
+      // Check for reduced motion preference
+      function checkReducedMotion() {
+        return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      }
       
       // Apply random filters to an image
       function applyRandomFilters(imgElement) {
+        // Skip if reduced motion is preferred
+        if (checkReducedMotion()) {
+          imgElement.style.filter = 'brightness(0.9)';
+          return;
+        }
+        
         const filters = [
           `brightness(${Math.random() * 0.5 + 0.8})`, // Less extreme brightness
           `contrast(${Math.random() * 0.5 + 0.8})`,   // Less extreme contrast
@@ -1365,6 +1473,11 @@
       
       // Get a random filter - epilepsy safe version
       function getRandomFilter() {
+        // Skip if reduced motion is preferred
+        if (checkReducedMotion()) {
+          return 'brightness(0.9)';
+        }
+        
         const filters = [
           `brightness(${Math.random() * 0.4 + 0.8})`,
           `contrast(${Math.random() * 0.4 + 0.8})`,
