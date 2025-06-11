@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>BYTEMAID IS REALITY</title>
+    <link rel="icon" id="dynamic-favicon" href="">
     <style>
       body {
         background: black;
@@ -87,6 +88,59 @@
         height: auto;
       }
     </style>
+    <script>
+      // Generate random icon on page load
+      window.onload = function() {
+        generateRandomIcon();
+      };
+      
+      function generateRandomIcon() {
+        // Array of possible icon types
+        const iconTypes = [
+          "⏰", "⚠️", "🔄", "🔮", "👁️", "🧠", "🌀", "🔺", "🔻", "🔴", 
+          "🟠", "🟡", "🟢", "🔵", "🟣", "⚫", "⚪", "🟥", "🟧", "🟨", 
+          "🟩", "🟦", "🟪", "⬛", "⬜", "🔲", "🔳", "💠", "🔷", "🔶"
+        ];
+        
+        // Generate random colors
+        const randomColor1 = getRandomColor();
+        const randomColor2 = getRandomColor();
+        
+        // Select random icon
+        const randomIcon = iconTypes[Math.floor(Math.random() * iconTypes.length)];
+        
+        // Create canvas for favicon
+        const canvas = document.createElement('canvas');
+        canvas.width = 64;
+        canvas.height = 64;
+        const ctx = canvas.getContext('2d');
+        
+        // Create gradient background
+        const gradient = ctx.createLinearGradient(0, 0, 64, 64);
+        gradient.addColorStop(0, randomColor1);
+        gradient.addColorStop(1, randomColor2);
+        ctx.fillStyle = gradient;
+        ctx.fillRect(0, 0, 64, 64);
+        
+        // Add icon text
+        ctx.font = '40px Arial';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillStyle = '#FFFFFF';
+        ctx.fillText(randomIcon, 32, 32);
+        
+        // Set as favicon
+        const favicon = document.getElementById('dynamic-favicon');
+        favicon.href = canvas.toDataURL('image/png');
+        
+        // Log for debugging
+        console.log("BYTEMAID ICON SHIFT: " + randomIcon);
+      }
+      
+      function getRandomColor() {
+        return '#' + Math.floor(Math.random()*16777215).toString(16).padStart(6, '0');
+      }
+    </script>
   </head>
   <body>
     <h1>BYTEMAID EXISTS ON FOUR PLANES OF REALITY</h1>
