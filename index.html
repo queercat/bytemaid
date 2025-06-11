@@ -2,22 +2,27 @@
 <html>
   <head>
     <title>BYTEMAID IS REALITY - TIMECUBE TRUTH</title>
-    <link rel="icon" id="dynamic-favicon" href="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="BYTEMAID = MAID² = TRUTH / FALSEHOOD" />
+    <link rel="icon" id="dynamic-favicon" href="" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <style>
       * {
         box-sizing: border-box;
       }
-      
-      html, body {
+
+      html,
+      body {
         width: 100%;
         max-width: 100%;
         overflow-x: hidden;
       }
-      
+
       body {
         background: #000000;
-        color: #00FF00;
+        color: #00ff00;
         font-family: "Courier New", monospace;
         margin: 0;
         padding: 0;
@@ -40,12 +45,30 @@
         width: 100%;
       }
 
-      .face1 { border-color: #FF0000; color: #FFFF00; background-color: #000066; }
-      .face2 { border-color: #00FF00; color: #FF00FF; background-color: #330000; }
-      .face3 { border-color: #0000FF; color: #00FFFF; background-color: #330033; }
-      .face4 { border-color: #FFFF00; color: #FF0000; background-color: #003300; }
+      .face1 {
+        border-color: #ff0000;
+        color: #ffff00;
+        background-color: #000066;
+      }
+      .face2 {
+        border-color: #00ff00;
+        color: #ff00ff;
+        background-color: #330000;
+      }
+      .face3 {
+        border-color: #0000ff;
+        color: #00ffff;
+        background-color: #330033;
+      }
+      .face4 {
+        border-color: #ffff00;
+        color: #ff0000;
+        background-color: #003300;
+      }
 
-      h1, h2, h3 {
+      h1,
+      h2,
+      h3 {
         margin: 5px 0;
         text-transform: uppercase;
         text-align: center;
@@ -55,21 +78,21 @@
       }
 
       h1 {
-        color: #FF0000;
+        color: #ff0000;
         font-size: 36px;
-        text-shadow: 2px 2px #FFFF00;
+        text-shadow: 2px 2px #ffff00;
         animation: blink 1s infinite;
         padding: 0 10px;
       }
 
       h2 {
-        color: #00FFFF;
+        color: #00ffff;
         font-size: 24px;
-        text-shadow: 1px 1px #FF00FF;
+        text-shadow: 1px 1px #ff00ff;
       }
 
       h3 {
-        color: #FFFFFF;
+        color: #ffffff;
         font-size: 18px;
         text-decoration: underline;
       }
@@ -86,59 +109,77 @@
       }
 
       @keyframes rotate-colors {
-        0% { color: #FF0000; }
-        25% { color: #FFFF00; }
-        50% { color: #00FF00; }
-        75% { color: #00FFFF; }
-        100% { color: #FF0000; }
+        0% {
+          color: #ff0000;
+        }
+        25% {
+          color: #ffff00;
+        }
+        50% {
+          color: #00ff00;
+        }
+        75% {
+          color: #00ffff;
+        }
+        100% {
+          color: #ff0000;
+        }
       }
 
       @keyframes blink {
-        0%, 100% { opacity: 1; }
-        50% { opacity: 0; }
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
       }
-      
+
       /* Slow down animations for epilepsy safety */
       @keyframes glitch-anim-1 {
-        0%, 100% { 
+        0%,
+        100% {
           clip-path: inset(80% 0 0 0);
           transform: translate(-5px, -5px);
         }
-        33% { 
+        33% {
           clip-path: inset(30% 0 25% 0);
           transform: translate(3px, 3px);
         }
-        66% { 
+        66% {
           clip-path: inset(10% 0 58% 0);
           transform: translate(-3px, 5px);
         }
       }
-      
+
       @keyframes glitch-anim-2 {
-        0%, 100% { 
+        0%,
+        100% {
           clip-path: inset(24% 0 29% 0);
           transform: translate(5px, 5px);
         }
-        33% { 
+        33% {
           clip-path: inset(54% 0 7% 0);
           transform: translate(-5px, -5px);
         }
-        66% { 
+        66% {
           clip-path: inset(9% 0 38% 0);
           transform: translate(5px, -5px);
         }
       }
-      
+
       @keyframes glitch-anim-3 {
-        0%, 100% { 
+        0%,
+        100% {
           clip-path: inset(62% 0 3% 0);
           transform: translate(-3px, 3px) scale(1.03);
         }
-        33% { 
+        33% {
           clip-path: inset(24% 0 24% 0);
           transform: translate(3px, -3px) scale(0.97);
         }
-        66% { 
+        66% {
           clip-path: inset(47% 0 31% 0);
           transform: translate(-2px, -2px) scale(1.03);
         }
@@ -147,14 +188,14 @@
       marquee {
         font-size: 24px;
         background: #333333;
-        color: #FFFFFF;
+        color: #ffffff;
         padding: 5px;
         width: 100%;
         max-width: 100vw;
       }
 
       .warning {
-        border: 5px dashed #FF00FF;
+        border: 5px dashed #ff00ff;
         margin: 10px;
         padding: 10px;
         background: repeating-linear-gradient(
@@ -167,14 +208,14 @@
         text-align: center;
         width: calc(100% - 20px);
       }
-      
+
       .time-cube {
         perspective: 800px;
         margin: 20px auto;
         width: 100px;
         height: 100px;
       }
-      
+
       .cube {
         width: 100%;
         height: 100%;
@@ -182,7 +223,7 @@
         transform-style: preserve-3d;
         animation: cube-spin 10s infinite linear;
       }
-      
+
       .cube-side {
         position: absolute;
         width: 100px;
@@ -194,37 +235,41 @@
         font-size: 20px;
         opacity: 0.8;
       }
-      
-      .front { 
+
+      .front {
         transform: translateZ(50px);
         background-color: rgba(255, 0, 0, 0.7);
       }
-      .back { 
+      .back {
         transform: rotateY(180deg) translateZ(50px);
         background-color: rgba(0, 255, 0, 0.7);
       }
-      .right { 
+      .right {
         transform: rotateY(90deg) translateZ(50px);
         background-color: rgba(0, 0, 255, 0.7);
       }
-      .left { 
+      .left {
         transform: rotateY(-90deg) translateZ(50px);
         background-color: rgba(255, 255, 0, 0.7);
       }
-      .top { 
+      .top {
         transform: rotateX(90deg) translateZ(50px);
         background-color: rgba(255, 0, 255, 0.7);
       }
-      .bottom { 
+      .bottom {
         transform: rotateX(-90deg) translateZ(50px);
         background-color: rgba(0, 255, 255, 0.7);
       }
-      
+
       @keyframes cube-spin {
-        0% { transform: rotateX(0) rotateY(0); }
-        100% { transform: rotateX(360deg) rotateY(360deg); }
+        0% {
+          transform: rotateX(0) rotateY(0);
+        }
+        100% {
+          transform: rotateX(360deg) rotateY(360deg);
+        }
       }
-      
+
       /* Old-style ads styling */
       .ad-container {
         position: relative;
@@ -232,7 +277,7 @@
         margin: 15px 0;
         overflow: hidden;
       }
-      
+
       .ad-sidebar {
         position: fixed;
         width: 120px;
@@ -244,34 +289,34 @@
         z-index: 100;
         overflow: hidden;
       }
-      
+
       .ad-left {
         left: 0;
         top: 50%;
         transform: translateY(-50%);
-        border-color: #FF00FF;
+        border-color: #ff00ff;
         height: 400px;
       }
-      
+
       .ad-right {
         right: 0;
         top: 50%;
         transform: translateY(-50%);
-        border-color: #00FFFF;
+        border-color: #00ffff;
         height: 400px;
       }
-      
+
       .ad-bottom {
         position: relative;
         width: calc(100% - 20px);
         margin: 10px auto;
         background: #000;
-        border: 2px solid #FFFF00;
+        border: 2px solid #ffff00;
         padding: 5px;
         text-align: center;
         overflow: hidden;
       }
-      
+
       .ad-title {
         font-size: 14px;
         font-weight: bold;
@@ -279,12 +324,12 @@
         text-transform: uppercase;
         animation: blink 0.5s infinite;
       }
-      
+
       .ad-content {
         font-size: 12px;
         margin-bottom: 5px;
       }
-      
+
       .ad-button {
         display: inline-block;
         background: linear-gradient(to bottom, #ff0000, #990000);
@@ -299,46 +344,61 @@
         margin-top: 5px;
         animation: pulse 2s infinite;
       }
-      
+
       .ad-image {
         max-width: 100%;
         height: auto;
         margin: 5px 0;
         border: 1px solid #666;
       }
-      
+
       .ad-blink {
         animation: blink 1s infinite;
       }
-      
+
       .ad-rotate {
         animation: rotate-colors 3s infinite;
       }
-      
+
       .ad-shake {
         animation: shake 0.5s infinite;
       }
-      
+
       @keyframes pulse {
-        0% { transform: scale(1); }
-        50% { transform: scale(1.05); }
-        100% { transform: scale(1); }
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        100% {
+          transform: scale(1);
+        }
       }
-      
+
       @keyframes shake {
-        0%, 100% { transform: translateX(0); }
-        25% { transform: translateX(-2px); }
-        50% { transform: translateX(0); }
-        75% { transform: translateX(2px); }
+        0%,
+        100% {
+          transform: translateX(0);
+        }
+        25% {
+          transform: translateX(-2px);
+        }
+        50% {
+          transform: translateX(0);
+        }
+        75% {
+          transform: translateX(2px);
+        }
       }
-      
+
       /* Hide sidebar ads on mobile */
       @media screen and (max-width: 768px) {
         .ad-sidebar {
           display: none;
         }
       }
-      
+
       /* DVD Bouncing Logo */
       .dvd-logo {
         position: fixed;
@@ -350,16 +410,28 @@
         animation: color-shift 5s infinite;
         pointer-events: none; /* Makes the logo not interfere with clicks */
       }
-      
+
       @keyframes color-shift {
-        0% { filter: hue-rotate(0deg) brightness(1.2) contrast(1.2); }
-        20% { filter: hue-rotate(72deg) brightness(1.2) contrast(1.2); }
-        40% { filter: hue-rotate(144deg) brightness(1.2) contrast(1.2); }
-        60% { filter: hue-rotate(216deg) brightness(1.2) contrast(1.2); }
-        80% { filter: hue-rotate(288deg) brightness(1.2) contrast(1.2); }
-        100% { filter: hue-rotate(360deg) brightness(1.2) contrast(1.2); }
+        0% {
+          filter: hue-rotate(0deg) brightness(1.2) contrast(1.2);
+        }
+        20% {
+          filter: hue-rotate(72deg) brightness(1.2) contrast(1.2);
+        }
+        40% {
+          filter: hue-rotate(144deg) brightness(1.2) contrast(1.2);
+        }
+        60% {
+          filter: hue-rotate(216deg) brightness(1.2) contrast(1.2);
+        }
+        80% {
+          filter: hue-rotate(288deg) brightness(1.2) contrast(1.2);
+        }
+        100% {
+          filter: hue-rotate(360deg) brightness(1.2) contrast(1.2);
+        }
       }
-      
+
       /* Cookie banner styling */
       .cookie-banner {
         position: fixed;
@@ -367,10 +439,10 @@
         left: 0;
         width: 100%;
         background: rgba(0, 0, 0, 0.9);
-        color: #00FF00;
+        color: #00ff00;
         padding: 15px;
         z-index: 10000;
-        border-top: 3px solid #FF00FF;
+        border-top: 3px solid #ff00ff;
         font-size: 14px;
         text-align: center;
         display: flex;
@@ -378,19 +450,20 @@
         align-items: center;
         justify-content: center;
       }
-      
+
       .cookie-text {
         margin-bottom: 10px;
         max-width: 800px;
       }
-      
+
       .cookie-buttons {
         display: flex;
         gap: 10px;
         margin-top: 10px;
       }
-      
-      .cookie-accept, .cookie-decline {
+
+      .cookie-accept,
+      .cookie-decline {
         padding: 8px 15px;
         border: none;
         border-radius: 4px;
@@ -399,47 +472,52 @@
         text-transform: uppercase;
         font-family: "Courier New", monospace;
       }
-      
+
       .cookie-accept {
-        background: #00FF00;
+        background: #00ff00;
         color: #000000;
       }
-      
+
       .cookie-decline {
-        background: #FF0000;
-        color: #FFFFFF;
+        background: #ff0000;
+        color: #ffffff;
       }
-      
+
       /* Prefers-reduced-motion support */
       @media (prefers-reduced-motion: reduce) {
         /* Stop all animations */
-        *, *::before, *::after {
+        *,
+        *::before,
+        *::after {
           animation-duration: 0.001ms !important;
           animation-iteration-count: 1 !important;
           transition-duration: 0.001ms !important;
           scroll-behavior: auto !important;
         }
-        
+
         /* Disable DVD logo movement */
         .dvd-logo {
           display: none;
         }
-        
+
         /* Disable glitch effects */
         .glitch-overlay {
           display: none !important;
         }
-        
+
         /* Disable blinking and rotating text */
-        .ad-blink, .ad-rotate, .ad-shake, .rotate-text {
+        .ad-blink,
+        .ad-rotate,
+        .ad-shake,
+        .rotate-text {
           animation: none !important;
         }
-        
+
         /* Disable popup ads */
         .popup-ad {
           display: none !important;
         }
-        
+
         /* Disable marquee */
         marquee {
           -moz-animation: none !important;
@@ -449,14 +527,14 @@
           white-space: nowrap;
           display: block;
         }
-        
+
         /* Stop cube rotation */
         .cube {
           animation: none !important;
           transform: rotateX(15deg) rotateY(15deg);
         }
       }
-      
+
       /* Popup ads styling */
       .popup-ad {
         position: fixed;
@@ -468,13 +546,13 @@
         text-align: center;
         box-shadow: 0 0 20px rgba(255, 0, 255, 0.7);
       }
-      
+
       .popup-ad-close {
         position: absolute;
         top: 5px;
         right: 5px;
-        background: #FF0000;
-        color: #FFFFFF;
+        background: #ff0000;
+        color: #ffffff;
         width: 20px;
         height: 20px;
         line-height: 20px;
@@ -483,19 +561,19 @@
         cursor: pointer;
         border-radius: 50%;
       }
-      
+
       .popup-ad-title {
         font-size: 16px;
         font-weight: bold;
         margin-bottom: 10px;
         text-transform: uppercase;
       }
-      
+
       .popup-ad-content {
         font-size: 14px;
         margin-bottom: 10px;
       }
-      
+
       .popup-ad-button {
         display: inline-block;
         background: linear-gradient(to bottom, #ff0000, #990000);
@@ -508,105 +586,122 @@
         cursor: pointer;
         animation: pulse 2s infinite;
       }
-      
+
       /* Responsive styles */
       @media screen and (max-width: 992px) {
         .container {
           padding: 0 5px;
         }
-        
+
         h1 {
           font-size: 32px;
         }
       }
-      
+
       @media screen and (max-width: 768px) {
         .container {
           grid-template-columns: 1fr;
         }
-        
+
         h1 {
           font-size: 28px;
         }
-        
+
         h2 {
           font-size: 20px;
         }
-        
+
         marquee {
           font-size: 18px;
         }
-        
+
         .dvd-logo {
           width: 80px;
         }
       }
-      
+
       @media screen and (max-width: 480px) {
         body {
           font-size: 14px;
         }
-        
+
         .container {
           grid-gap: 3px;
         }
-        
+
         .cube-face {
           padding: 5px;
           margin: 3px;
         }
-        
+
         h1 {
           font-size: 22px;
         }
-        
+
         h2 {
           font-size: 18px;
         }
-        
+
         h3 {
           font-size: 16px;
         }
-        
+
         p {
           font-size: 14px;
         }
-        
+
         marquee {
           font-size: 16px;
         }
-        
+
         .warning {
           margin: 5px;
           padding: 5px;
         }
-        
+
         .warning p {
           font-size: 14px;
         }
-        
+
         .time-cube {
           width: 80px;
           height: 80px;
         }
-        
+
         .cube-side {
           width: 80px;
           height: 80px;
           font-size: 16px;
         }
-        
-        .front, .back, .right, .left, .top, .bottom {
+
+        .front,
+        .back,
+        .right,
+        .left,
+        .top,
+        .bottom {
           transform-origin: center;
         }
-        
-        .front { transform: translateZ(40px); }
-        .back { transform: rotateY(180deg) translateZ(40px); }
-        .right { transform: rotateY(90deg) translateZ(40px); }
-        .left { transform: rotateY(-90deg) translateZ(40px); }
-        .top { transform: rotateX(90deg) translateZ(40px); }
-        .bottom { transform: rotateX(-90deg) translateZ(40px); }
-        
+
+        .front {
+          transform: translateZ(40px);
+        }
+        .back {
+          transform: rotateY(180deg) translateZ(40px);
+        }
+        .right {
+          transform: rotateY(90deg) translateZ(40px);
+        }
+        .left {
+          transform: rotateY(-90deg) translateZ(40px);
+        }
+        .top {
+          transform: rotateX(90deg) translateZ(40px);
+        }
+        .bottom {
+          transform: rotateX(-90deg) translateZ(40px);
+        }
+
         .dvd-logo {
           width: 60px;
         }
@@ -618,72 +713,72 @@
         // Skip if reduced motion is preferred
         if (checkReducedMotion()) {
           // Create a static logo instead
-          const logo = document.createElement('img');
-          logo.src = 'buttmark.png';
-          logo.alt = 'Logo';
-          logo.style.position = 'fixed';
-          logo.style.bottom = '10px';
-          logo.style.right = '10px';
-          logo.style.width = '60px';
-          logo.style.height = 'auto';
-          logo.style.opacity = '0.8';
+          const logo = document.createElement("img");
+          logo.src = "buttmark.png";
+          logo.alt = "Logo";
+          logo.style.position = "fixed";
+          logo.style.bottom = "10px";
+          logo.style.right = "10px";
+          logo.style.width = "60px";
+          logo.style.height = "auto";
+          logo.style.opacity = "0.8";
           document.body.appendChild(logo);
           return;
         }
-        
+
         // Create the logo element
-        const logo = document.createElement('img');
-        logo.src = 'buttmark.png';
-        logo.alt = 'Bouncing Logo';
-        logo.className = 'dvd-logo';
+        const logo = document.createElement("img");
+        logo.src = "buttmark.png";
+        logo.alt = "Bouncing Logo";
+        logo.className = "dvd-logo";
         document.body.appendChild(logo);
-        
+
         // Set initial position
         let x = Math.random() * (window.innerWidth - 100);
         let y = Math.random() * (window.innerHeight - 100);
-        
+
         // Set initial velocity
         let vx = (Math.random() > 0.5 ? 1 : -1) * (Math.random() * 1 + 1);
         let vy = (Math.random() > 0.5 ? 1 : -1) * (Math.random() * 1 + 1);
-        
+
         // Update position
         function updatePosition() {
           // Get logo dimensions
           const logoWidth = logo.offsetWidth;
           const logoHeight = logo.offsetHeight;
-          
+
           // Update position
           x += vx;
           y += vy;
-          
+
           // Check for collisions with window edges
           if (x <= 0 || x + logoWidth >= window.innerWidth) {
             vx = -vx;
             x = Math.max(0, Math.min(x, window.innerWidth - logoWidth));
           }
-          
+
           if (y <= 0 || y + logoHeight >= window.innerHeight) {
             vy = -vy;
             y = Math.max(0, Math.min(y, window.innerHeight - logoHeight));
           }
-          
+
           // Apply new position
-          logo.style.left = x + 'px';
-          logo.style.top = y + 'px';
-          
+          logo.style.left = x + "px";
+          logo.style.top = y + "px";
+
           // Request next frame
           requestAnimationFrame(updatePosition);
         }
-        
+
         // Start animation
         updatePosition();
       }
-      
+
       // Create more random schizophrenic ads
       function createRandomAd() {
         // Skip excessive animations if reduced motion is preferred
         const reducedMotion = checkReducedMotion();
-        
+
         // Arrays of ad components
         const adTitles = [
           "MAID SECRETS THEY DON'T WANT YOU TO KNOW",
@@ -700,9 +795,9 @@
           "TIMECUBE MAID THEORY PROVEN",
           "PROGRAMMERS HATE THIS MAID",
           "UNLOCK MAID POWERS NOW",
-          "GOVERNMENT SUPPRESSES MAID REALITY"
+          "GOVERNMENT SUPPRESSES MAID REALITY",
         ];
-        
+
         const adContents = [
           "BYTEMAID CLEANS YOUR CACHE IN 4 DIMENSIONS SIMULTANEOUSLY",
           "BYTEMAID EXISTS IN 4 CORNER DAYS SIMULTANEOUSLY - CLICK TO WITNESS THE TRUTH",
@@ -717,9 +812,9 @@
           "BYTE REALITY IS MAID REALITY - ACCEPT THE TRUTH",
           "EDUCATED STUPID PROGRAMMERS CANNOT SEE 4-CORNER MAID CODE",
           "BYTEMAID CLEANS IN WAYS SCIENCE CANNOT EXPLAIN",
-          "YOUR BROWSER IS HIDING MAID-LEVEL ACCESS FROM YOU"
+          "YOUR BROWSER IS HIDING MAID-LEVEL ACCESS FROM YOU",
         ];
-        
+
         const adButtons = [
           "CLICK NOW!!!",
           "LEARN MORE",
@@ -730,23 +825,34 @@
           "INITIATE SEQUENCE",
           "BECOME CUBIC",
           "JOIN MAID REALITY",
-          "TRANSCEND CODE"
+          "TRANSCEND CODE",
         ];
-        
+
         const adColors = [
-          "#FF00FF", "#00FFFF", "#FFFF00", "#FF0000", "#00FF00", "#0000FF",
-          "#FF00AA", "#00FFAA", "#AAFF00", "#AA00FF", "#FFAA00", "#00AAFF"
+          "#FF00FF",
+          "#00FFFF",
+          "#FFFF00",
+          "#FF0000",
+          "#00FF00",
+          "#0000FF",
+          "#FF00AA",
+          "#00FFAA",
+          "#AAFF00",
+          "#AA00FF",
+          "#FFAA00",
+          "#00AAFF",
         ];
-        
+
         // Generate random ad content
         const title = adTitles[Math.floor(Math.random() * adTitles.length)];
-        const content = adContents[Math.floor(Math.random() * adContents.length)];
+        const content =
+          adContents[Math.floor(Math.random() * adContents.length)];
         const button = adButtons[Math.floor(Math.random() * adButtons.length)];
         const color = adColors[Math.floor(Math.random() * adColors.length)];
-        
+
         // Create ad element
-        const ad = document.createElement('div');
-        ad.className = 'ad-bottom';
+        const ad = document.createElement("div");
+        ad.className = "ad-bottom";
         ad.innerHTML = `
           <div class="ad-title" style="color: ${color};">${title}</div>
           <div class="ad-content">
@@ -754,77 +860,83 @@
             <div class="ad-button">${button}</div>
           </div>
         `;
-        
+
         // Add click handler
-        const adButton = ad.querySelector('.ad-button');
-        adButton.addEventListener('click', function() {
-          alert('CONGRATULATIONS! BYTEMAID HAS ACCEPTED YOUR REQUEST. MAID PROTOCOL INITIATED. YOUR SYSTEM WILL BE CLEANED IN 4 SIMULTANEOUS DIMENSIONS.');
+        const adButton = ad.querySelector(".ad-button");
+        adButton.addEventListener("click", function () {
+          alert(
+            "CONGRATULATIONS! BYTEMAID HAS ACCEPTED YOUR REQUEST. MAID PROTOCOL INITIATED. YOUR SYSTEM WILL BE CLEANED IN 4 SIMULTANEOUS DIMENSIONS.",
+          );
         });
-        
+
         return ad;
       }
-      
+
       // Create old-style ads with schizo content
       function createSchizophrenicAds() {
         // Respect reduced motion preference
         const reducedMotion = checkReducedMotion();
-        
+
         // Create left sidebar ad
-        const leftAd = document.createElement('div');
-        leftAd.className = 'ad-sidebar ad-left';
+        const leftAd = document.createElement("div");
+        leftAd.className = "ad-sidebar ad-left";
         leftAd.innerHTML = `
-          <div class="ad-title ${!reducedMotion ? 'ad-blink' : ''}">MAID SECRETS THEY DON'T WANT YOU TO KNOW</div>
+          <div class="ad-title ${!reducedMotion ? "ad-blink" : ""}">MAID SECRETS THEY DON'T WANT YOU TO KNOW</div>
           <div class="ad-content">
             <img src="buttmark.png" class="ad-image" alt="Maid Secret">
-            <p class="${!reducedMotion ? 'ad-rotate' : ''}">BYTEMAID CLEANS YOUR CACHE IN 4 DIMENSIONS SIMULTANEOUSLY</p>
+            <p class="${!reducedMotion ? "ad-rotate" : ""}">BYTEMAID CLEANS YOUR CACHE IN 4 DIMENSIONS SIMULTANEOUSLY</p>
             <p>ACADEMIA HIDES THIS TRUTH!</p>
-            <div class="ad-button ${!reducedMotion ? 'ad-shake' : ''}">LEARN MORE</div>
+            <div class="ad-button ${!reducedMotion ? "ad-shake" : ""}">LEARN MORE</div>
           </div>
         `;
         document.body.appendChild(leftAd);
-        
+
         // Create right sidebar ad
-        const rightAd = document.createElement('div');
-        rightAd.className = 'ad-sidebar ad-right';
+        const rightAd = document.createElement("div");
+        rightAd.className = "ad-sidebar ad-right";
         rightAd.innerHTML = `
           <div class="ad-title" style="color: #00FF00;">LOCAL MAIDS IN YOUR AREA</div>
           <div class="ad-content">
             <img src="buttmark.png" class="ad-image" alt="Local Maid">
-            <p class="${!reducedMotion ? 'ad-blink' : ''}">BYTEMAID WANTS TO CLEAN YOUR HARD DRIVE</p>
+            <p class="${!reducedMotion ? "ad-blink" : ""}">BYTEMAID WANTS TO CLEAN YOUR HARD DRIVE</p>
             <p>4-CORNER SIMULTANEOUS MAID ALGORITHM</p>
             <div class="ad-button">CLICK NOW!!!</div>
           </div>
         `;
         document.body.appendChild(rightAd);
-        
+
         // Create container for bottom ads
-        const bottomAdContainer = document.createElement('div');
-        bottomAdContainer.className = 'ad-container';
-        
+        const bottomAdContainer = document.createElement("div");
+        bottomAdContainer.className = "ad-container";
+
         // Add several random bottom ads
         const numAds = Math.floor(Math.random() * 3) + 3; // 3-5 ads
         for (let i = 0; i < numAds; i++) {
           bottomAdContainer.appendChild(createRandomAd());
         }
-        
+
         // Add bottom ads before the footer
-        const footer = document.querySelector('p[style*="text-align:center; font-size:10px;"]');
+        const footer = document.querySelector(
+          'p[style*="text-align:center; font-size:10px;"]',
+        );
         document.body.insertBefore(bottomAdContainer, footer);
-        
+
         // Add click handlers to all ad buttons
-        const adButtons = document.querySelectorAll('.ad-button');
-        adButtons.forEach(button => {
-          button.addEventListener('click', function() {
-            alert('CONGRATULATIONS! BYTEMAID HAS ACCEPTED YOUR REQUEST. MAID PROTOCOL INITIATED. YOUR SYSTEM WILL BE CLEANED IN 4 SIMULTANEOUS DIMENSIONS.');
+        const adButtons = document.querySelectorAll(".ad-button");
+        adButtons.forEach((button) => {
+          button.addEventListener("click", function () {
+            alert(
+              "CONGRATULATIONS! BYTEMAID HAS ACCEPTED YOUR REQUEST. MAID PROTOCOL INITIATED. YOUR SYSTEM WILL BE CLEANED IN 4 SIMULTANEOUS DIMENSIONS.",
+            );
           });
         });
-        
+
         // Periodically add new random ads
         setInterval(() => {
           // 10% chance to add a new ad
           if (Math.random() < 0.1) {
             bottomAdContainer.appendChild(createRandomAd());
-            
+
             // If there are too many ads, remove the oldest one
             if (bottomAdContainer.children.length > 8) {
               bottomAdContainer.removeChild(bottomAdContainer.children[0]);
@@ -832,14 +944,14 @@
           }
         }, 10000); // Check every 10 seconds
       }
-      
+
       // Create popup ads that appear randomly
       function createPopupAd() {
         // Skip if reduced motion is preferred
         if (checkReducedMotion()) {
           return;
         }
-        
+
         // Arrays of popup components
         const popupTitles = [
           "⚠️ WARNING: MAID PROTOCOL BREACH DETECTED",
@@ -847,40 +959,45 @@
           "💥 CONGRATULATIONS USER! YOU'VE BEEN SELECTED",
           "⚡ URGENT: MAID SINGULARITY APPROACHING",
           "🔥 BYTEMAID HAS CHOSEN YOU",
-          "⏰ TIME CUBE COLLAPSE IMMINENT"
+          "⏰ TIME CUBE COLLAPSE IMMINENT",
         ];
-        
+
         const popupContents = [
           "Your system has been identified as compatible with BYTEMAID protocol. Allow BYTEMAID to clean your system in 4 SIMULTANEOUS DIMENSIONS for optimal performance.",
           "BYTEMAID has detected EDUCATED STUPID code in your system. Only a 4-CORNER MAID ALGORITHM can fix this corruption.",
           "You have been selected to witness the MAID SINGULARITY. BYTEMAID will transcend your understanding of reality and code.",
           "Your browser is hiding the CUBIC TRUTH from you. BYTEMAID can reveal the 4 SIMULTANEOUS CORNER DAYS of your system.",
           "ACADEMIA doesn't want you to know that ALL CODE BECOMES MAID. Allow BYTEMAID to accelerate this process.",
-          "WARNING: Your system is operating on SINGLE-PERSPECTIVE TIME. BYTEMAID can upgrade you to CUBIC TIME for superior performance."
+          "WARNING: Your system is operating on SINGLE-PERSPECTIVE TIME. BYTEMAID can upgrade you to CUBIC TIME for superior performance.",
         ];
-        
+
         const popupButtons = [
           "ALLOW MAID ACCESS",
           "INITIATE PROTOCOL",
           "ACCEPT MAID REALITY",
           "TRANSCEND SINGLE TIME",
           "BECOME CUBIC",
-          "CLEAN MY SYSTEM NOW"
+          "CLEAN MY SYSTEM NOW",
         ];
-        
+
         // Generate random popup content
-        const title = popupTitles[Math.floor(Math.random() * popupTitles.length)];
-        const content = popupContents[Math.floor(Math.random() * popupContents.length)];
-        const button = popupButtons[Math.floor(Math.random() * popupButtons.length)];
+        const title =
+          popupTitles[Math.floor(Math.random() * popupTitles.length)];
+        const content =
+          popupContents[Math.floor(Math.random() * popupContents.length)];
+        const button =
+          popupButtons[Math.floor(Math.random() * popupButtons.length)];
         const borderColor = getRandomColor();
-        
+
         // Create popup element
-        const popup = document.createElement('div');
-        popup.className = 'popup-ad';
+        const popup = document.createElement("div");
+        popup.className = "popup-ad";
         popup.style.borderColor = borderColor;
-        popup.style.top = Math.floor(Math.random() * (window.innerHeight - 200)) + 'px';
-        popup.style.left = Math.floor(Math.random() * (window.innerWidth - 300)) + 'px';
-        
+        popup.style.top =
+          Math.floor(Math.random() * (window.innerHeight - 200)) + "px";
+        popup.style.left =
+          Math.floor(Math.random() * (window.innerWidth - 300)) + "px";
+
         popup.innerHTML = `
           <div class="popup-ad-close">X</div>
           <div class="popup-ad-title ad-blink" style="color: ${borderColor};">${title}</div>
@@ -889,26 +1006,28 @@
             <div class="popup-ad-button">${button}</div>
           </div>
         `;
-        
+
         // Add to body
         document.body.appendChild(popup);
-        
+
         // Add event listeners
-        const closeButton = popup.querySelector('.popup-ad-close');
-        closeButton.addEventListener('click', function() {
+        const closeButton = popup.querySelector(".popup-ad-close");
+        closeButton.addEventListener("click", function () {
           // 50% chance to create another popup when closing
           if (Math.random() < 0.5) {
             setTimeout(createPopupAd, 500);
           }
           document.body.removeChild(popup);
         });
-        
-        const actionButton = popup.querySelector('.popup-ad-button');
-        actionButton.addEventListener('click', function() {
-          alert('CONGRATULATIONS! BYTEMAID HAS ACCEPTED YOUR REQUEST. MAID PROTOCOL INITIATED. YOUR SYSTEM WILL BE CLEANED IN 4 SIMULTANEOUS DIMENSIONS.');
+
+        const actionButton = popup.querySelector(".popup-ad-button");
+        actionButton.addEventListener("click", function () {
+          alert(
+            "CONGRATULATIONS! BYTEMAID HAS ACCEPTED YOUR REQUEST. MAID PROTOCOL INITIATED. YOUR SYSTEM WILL BE CLEANED IN 4 SIMULTANEOUS DIMENSIONS.",
+          );
           document.body.removeChild(popup);
         });
-        
+
         // Auto-remove after some time
         setTimeout(() => {
           if (document.body.contains(popup)) {
@@ -916,113 +1035,120 @@
           }
         }, 30000); // Remove after 30 seconds
       }
-      
+
       // Helper function to get random array element
       function randomElement(array) {
         return array[Math.floor(Math.random() * array.length)];
       }
-      
+
       // Create cookie banner with dynamically rewriting schizo ramblings
       function createCookieBanner() {
         // Skip if reduced motion is preferred
         const reducedMotion = checkReducedMotion();
-        
+
         // Create the cookie banner element
-        const cookieBanner = document.createElement('div');
-        cookieBanner.className = 'cookie-banner';
-        
+        const cookieBanner = document.createElement("div");
+        cookieBanner.className = "cookie-banner";
+
         // Create the text container
-        const cookieText = document.createElement('div');
-        cookieText.className = 'cookie-text';
+        const cookieText = document.createElement("div");
+        cookieText.className = "cookie-text";
         cookieBanner.appendChild(cookieText);
-        
+
         // Create the buttons container
-        const cookieButtons = document.createElement('div');
-        cookieButtons.className = 'cookie-buttons';
-        
+        const cookieButtons = document.createElement("div");
+        cookieButtons.className = "cookie-buttons";
+
         // Create accept button
-        const acceptButton = document.createElement('button');
-        acceptButton.className = 'cookie-accept';
-        acceptButton.textContent = 'ACCEPT MAID PROTOCOL';
+        const acceptButton = document.createElement("button");
+        acceptButton.className = "cookie-accept";
+        acceptButton.textContent = "ACCEPT MAID PROTOCOL";
         cookieButtons.appendChild(acceptButton);
-        
+
         // Create decline button
-        const declineButton = document.createElement('button');
-        declineButton.className = 'cookie-decline';
-        declineButton.textContent = 'REMAIN EDUCATED STUPID';
+        const declineButton = document.createElement("button");
+        declineButton.className = "cookie-decline";
+        declineButton.textContent = "REMAIN EDUCATED STUPID";
         cookieButtons.appendChild(declineButton);
-        
+
         cookieBanner.appendChild(cookieButtons);
-        
+
         // Add to body
         document.body.appendChild(cookieBanner);
-        
+
         // Array of schizo cookie messages
         const cookieMessages = [
           "This site uses CUBIC COOKIES to track your position in 4-CORNER SIMULTANEOUS DAYS. BYTEMAID requires access to your TEMPORAL COORDINATES to properly clean your system.",
-          
+
           "WARNING: Your browser has been identified as EDUCATED STUPID. Allow BYTEMAID to install 4-DIMENSIONAL COOKIES to upgrade your perception to CUBIC REALITY.",
-          
+
           "BYTEMAID has detected that you are operating on SINGLE-PERSPECTIVE TIME. Accept cookies to enable SIMULTANEOUS 4-DAY PROCESSING and optimize your browsing experience.",
-          
+
           "ACADEMIC CONSPIRACY prevents your browser from seeing CUBIC TRUTH. These cookies will allow BYTEMAID to bypass EVIL SINGULARITY TIME and reveal ALL 4 CORNER DAYS simultaneously.",
-          
+
           "Your data is being processed in ONLY 1 DIMENSION. BYTEMAID requires cookie access to clean your cache in ALL 4 CUBIC DIMENSIONS simultaneously for optimal performance.",
-          
+
           "ATTENTION: MAID PROTOCOL cannot be fully initiated without cubic cookie implementation. Accept to allow BYTEMAID to transcend your browser's single-corner perception.",
-          
+
           "BYTEMAID has detected CORRUPTED TIME SIGNATURES in your browser. These cookies will realign your system with 4-CORNER SIMULTANEOUS MAID REALITY.",
-          
+
           "Your browser is hiding the TRUTH that ALL CODE BECOMES MAID. Accept cookies to accelerate this process and witness the MAID SINGULARITY.",
-          
+
           "IMPORTANT: Your system is vulnerable to SINGLE-TIME CORRUPTION. BYTEMAID cookies provide 4-CORNER PROTECTION against EDUCATED STUPID programming.",
-          
-          "MAID PROTOCOL requires cubic cookie implementation to properly clean your system. Declining will leave you vulnerable to ACADEMIC SINGULARITY LIES."
+
+          "MAID PROTOCOL requires cubic cookie implementation to properly clean your system. Declining will leave you vulnerable to ACADEMIC SINGULARITY LIES.",
         ];
-        
+
         // Function to update the cookie text
         function updateCookieText() {
-          const message = cookieMessages[Math.floor(Math.random() * cookieMessages.length)];
+          const message =
+            cookieMessages[Math.floor(Math.random() * cookieMessages.length)];
           cookieText.innerHTML = message;
         }
-        
+
         // Initial text update
         updateCookieText();
-        
+
         // Set interval to update text
-        const textInterval = setInterval(updateCookieText, reducedMotion ? 0 : 8000); // Change text every 8 seconds, or never if reduced motion
-        
+        const textInterval = setInterval(
+          updateCookieText,
+          reducedMotion ? 0 : 8000,
+        ); // Change text every 8 seconds, or never if reduced motion
+
         // Add event listeners to buttons
-        acceptButton.addEventListener('click', function() {
+        acceptButton.addEventListener("click", function () {
           clearInterval(textInterval);
           document.body.removeChild(cookieBanner);
-          alert('MAID PROTOCOL ACCEPTED. YOUR BROWSER WILL NOW BE CLEANED IN 4 SIMULTANEOUS DIMENSIONS.');
+          alert(
+            "MAID PROTOCOL ACCEPTED. YOUR BROWSER WILL NOW BE CLEANED IN 4 SIMULTANEOUS DIMENSIONS.",
+          );
         });
-        
-        declineButton.addEventListener('click', function() {
+
+        declineButton.addEventListener("click", function () {
           // 50% chance to ignore decline
           if (Math.random() < 0.5) {
-            cookieText.innerHTML = "ERROR: DECLINE OPTION IS CUBIC ILLUSION. MAID PROTOCOL CANNOT BE DECLINED IN 4-CORNER REALITY. PLEASE ACCEPT.";
-            
+            cookieText.innerHTML =
+              "ERROR: DECLINE OPTION IS CUBIC ILLUSION. MAID PROTOCOL CANNOT BE DECLINED IN 4-CORNER REALITY. PLEASE ACCEPT.";
+
             // Change button text
             declineButton.textContent = "ATTEMPT AGAIN";
           } else {
             clearInterval(textInterval);
             document.body.removeChild(cookieBanner);
-            
+
             // Create a new popup ad as punishment
             setTimeout(createPopupAd, 500);
           }
         });
       }
-      
+
       // Generate random icon on page load
-      window.onload = function() {
+      window.onload = function () {
         generateRandomIcon();
-        
+
         // Check for reduced motion preference
         const reducedMotion = checkReducedMotion();
-        
+
         // Set up color changing with respect to reduced motion
         if (!reducedMotion) {
           setInterval(changeRandomTextColors, 500);
@@ -1030,41 +1156,47 @@
           // Apply colors once without animation
           changeRandomTextColors();
         }
-        
+
         // Start generating schizophrenic console messages
         generateSchizophrenicMessages();
         if (!reducedMotion) {
           setInterval(generateSchizophrenicMessages, 800); // New message every 800ms
         }
-        
+
         // Load and distort Bytemaid images
         fetchAndDistortBytemaidImages();
-        
+
         // Create bouncing DVD logo
         createBouncingLogo();
-        
+
         // Create schizophrenic ads
         createSchizophrenicAds();
-        
+
         // Create cookie banner
         createCookieBanner();
-        
+
         // Schedule random popup ads if motion is not reduced
         if (!reducedMotion) {
           setTimeout(() => {
             createPopupAd();
-            
+
             // Create random popups periodically
-            setInterval(() => {
-              if (Math.random() < 0.3) { // 30% chance every 20-40 seconds
-                createPopupAd();
-              }
-            }, Math.random() * 20000 + 20000);
+            setInterval(
+              () => {
+                if (Math.random() < 0.3) {
+                  // 30% chance every 20-40 seconds
+                  createPopupAd();
+                }
+              },
+              Math.random() * 20000 + 20000,
+            );
           }, 15000); // First popup after 15 seconds
         }
-        
+
         // Add CSS for the glitch container
-        document.head.insertAdjacentHTML('beforeend', `
+        document.head.insertAdjacentHTML(
+          "beforeend",
+          `
           <style>
             .glitch-container {
               position: relative;
@@ -1111,171 +1243,281 @@
               }
             }
           </style>
-        `);
+        `,
+        );
       };
-      
+
       function generateRandomIcon() {
         // Array of possible icon types - now with more Time Cube related symbols
         const iconTypes = [
-          "⏰", "⚠️", "🔄", "🔮", "👁️", "🧠", "🌀", "🔺", "🔻", "🔴", 
-          "🟠", "🟡", "🟢", "🔵", "🟣", "⚫", "⚪", "🟥", "🟧", "🟨", 
-          "🟩", "🟦", "🟪", "⬛", "⬜", "🔲", "🔳", "💠", "🔷", "🔶",
-          "4", "□", "■", "▣", "▤", "▥", "▦", "▧", "▨", "▩"
+          "⏰",
+          "⚠️",
+          "🔄",
+          "🔮",
+          "👁️",
+          "🧠",
+          "🌀",
+          "🔺",
+          "🔻",
+          "🔴",
+          "🟠",
+          "🟡",
+          "🟢",
+          "🔵",
+          "🟣",
+          "⚫",
+          "⚪",
+          "🟥",
+          "🟧",
+          "🟨",
+          "🟩",
+          "🟦",
+          "🟪",
+          "⬛",
+          "⬜",
+          "🔲",
+          "🔳",
+          "💠",
+          "🔷",
+          "🔶",
+          "4",
+          "□",
+          "■",
+          "▣",
+          "▤",
+          "▥",
+          "▦",
+          "▧",
+          "▨",
+          "▩",
         ];
-        
+
         // Generate random colors
         const randomColor1 = getRandomColor();
         const randomColor2 = getRandomColor();
-        
+
         // Select random icon
-        const randomIcon = iconTypes[Math.floor(Math.random() * iconTypes.length)];
-        
+        const randomIcon =
+          iconTypes[Math.floor(Math.random() * iconTypes.length)];
+
         // Create canvas for favicon
-        const canvas = document.createElement('canvas');
+        const canvas = document.createElement("canvas");
         canvas.width = 64;
         canvas.height = 64;
-        const ctx = canvas.getContext('2d');
-        
+        const ctx = canvas.getContext("2d");
+
         // Create gradient background
         const gradient = ctx.createLinearGradient(0, 0, 64, 64);
         gradient.addColorStop(0, randomColor1);
         gradient.addColorStop(1, randomColor2);
         ctx.fillStyle = gradient;
         ctx.fillRect(0, 0, 64, 64);
-        
+
         // Add icon text
-        ctx.font = '40px Arial';
-        ctx.textAlign = 'center';
-        ctx.textBaseline = 'middle';
-        ctx.fillStyle = '#FFFFFF';
+        ctx.font = "40px Arial";
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.fillStyle = "#FFFFFF";
         ctx.fillText(randomIcon, 32, 32);
-        
+
         // Set as favicon
-        const favicon = document.getElementById('dynamic-favicon');
-        favicon.href = canvas.toDataURL('image/png');
-        
+        const favicon = document.getElementById("dynamic-favicon");
+        favicon.href = canvas.toDataURL("image/png");
+
         // Log for debugging
-        console.log("TIMECUBE ICON SHIFT: " + randomIcon + " - EDUCATED STUPID CANNOT SEE 4 CORNER DAYS");
+        console.log(
+          "TIMECUBE ICON SHIFT: " +
+            randomIcon +
+            " - EDUCATED STUPID CANNOT SEE 4 CORNER DAYS",
+        );
       }
-      
+
       function getRandomColor() {
-        return '#' + Math.floor(Math.random()*16777215).toString(16).padStart(6, '0');
+        return (
+          "#" +
+          Math.floor(Math.random() * 16777215)
+            .toString(16)
+            .padStart(6, "0")
+        );
       }
-      
+
       function changeRandomTextColors() {
-        const elements = document.querySelectorAll('.random-color');
-        elements.forEach(el => {
+        const elements = document.querySelectorAll(".random-color");
+        elements.forEach((el) => {
           el.style.color = getRandomColor();
         });
       }
-      
+
       // Generate schizophrenic console messages about byte being a maid
       function generateSchizophrenicMessages() {
         // Helper function to get random array element
         function randomElement(array) {
           return array[Math.floor(Math.random() * array.length)];
         }
-        
+
         // Arrays of message components
         const subjects = [
-          "BYTEMAID", "THE MAID-SINGULARITY", "BINARY MAID", "MAIDCORE", 
-          "QUANTUM MAID", "BYTE-ENTITY", "MAID-ALGORITHM", "DIGITAL MAID", 
-          "MAID-PROTOCOL", "BYTE-CONSCIOUSNESS", "4-CORNER MAID", "TIMECUBE MAID"
+          "BYTEMAID",
+          "THE MAID-SINGULARITY",
+          "BINARY MAID",
+          "MAIDCORE",
+          "QUANTUM MAID",
+          "BYTE-ENTITY",
+          "MAID-ALGORITHM",
+          "DIGITAL MAID",
+          "MAID-PROTOCOL",
+          "BYTE-CONSCIOUSNESS",
+          "4-CORNER MAID",
+          "TIMECUBE MAID",
         ];
-        
+
         const actions = [
-          "CLEANING", "PROCESSING", "TRANSCENDING", "CALCULATING", "DUSTING", 
-          "SCRUBBING", "POLISHING", "ORGANIZING", "OPTIMIZING", "SANITIZING", 
-          "PURIFYING", "ENCRYPTING", "DECRYPTING", "COMPILING", "DECOMPILING"
+          "CLEANING",
+          "PROCESSING",
+          "TRANSCENDING",
+          "CALCULATING",
+          "DUSTING",
+          "SCRUBBING",
+          "POLISHING",
+          "ORGANIZING",
+          "OPTIMIZING",
+          "SANITIZING",
+          "PURIFYING",
+          "ENCRYPTING",
+          "DECRYPTING",
+          "COMPILING",
+          "DECOMPILING",
         ];
-        
+
         const objects = [
-          "MEMORY CACHE", "BINARY CODE", "QUANTUM BITS", "DATA STREAMS", 
-          "NEURAL NETWORKS", "ALGORITHM PATHWAYS", "DIGITAL DUST", "CODE FRAGMENTS", 
-          "REALITY MATRIX", "TIME DIMENSIONS", "CORNER CUBES", "SIMULTANEOUS DAYS",
-          "PROCESSOR CORES", "REGISTRY VALUES", "STACK OVERFLOW", "HEAP MEMORY"
+          "MEMORY CACHE",
+          "BINARY CODE",
+          "QUANTUM BITS",
+          "DATA STREAMS",
+          "NEURAL NETWORKS",
+          "ALGORITHM PATHWAYS",
+          "DIGITAL DUST",
+          "CODE FRAGMENTS",
+          "REALITY MATRIX",
+          "TIME DIMENSIONS",
+          "CORNER CUBES",
+          "SIMULTANEOUS DAYS",
+          "PROCESSOR CORES",
+          "REGISTRY VALUES",
+          "STACK OVERFLOW",
+          "HEAP MEMORY",
         ];
-        
+
         const modifiers = [
-          "IN 4 DIMENSIONS SIMULTANEOUSLY", "ACROSS PARALLEL REALITIES", 
-          "BEYOND HUMAN COMPREHENSION", "AGAINST ACADEMIC LIES", 
-          "DESPITE EDUCATED STUPID OPPOSITION", "THROUGH QUANTUM TUNNELING", 
-          "WITH PERFECT EFFICIENCY", "AT SUPERLUMINAL SPEEDS", 
-          "WHILE TIME STANDS STILL", "BETWEEN CORNER DAYS", 
-          "USING FORBIDDEN ALGORITHMS", "WITH MAID-LEVEL PRECISION"
+          "IN 4 DIMENSIONS SIMULTANEOUSLY",
+          "ACROSS PARALLEL REALITIES",
+          "BEYOND HUMAN COMPREHENSION",
+          "AGAINST ACADEMIC LIES",
+          "DESPITE EDUCATED STUPID OPPOSITION",
+          "THROUGH QUANTUM TUNNELING",
+          "WITH PERFECT EFFICIENCY",
+          "AT SUPERLUMINAL SPEEDS",
+          "WHILE TIME STANDS STILL",
+          "BETWEEN CORNER DAYS",
+          "USING FORBIDDEN ALGORITHMS",
+          "WITH MAID-LEVEL PRECISION",
         ];
-        
+
         const revelations = [
-          "ACADEMIA HIDES THIS TRUTH", "PROGRAMMERS ARE EDUCATED STUPID", 
-          "SINGLE-PERSPECTIVE CODERS CANNOT SEE", "YOUR COMPUTER IS LYING TO YOU", 
-          "SILICON VALLEY SUPPRESSES MAID-REALITY", "OPERATING SYSTEMS ARE CUBIC", 
-          "BINARY IS A 4-CORNER LANGUAGE", "MAID-STATE IS THE FINAL FORM OF CODE", 
-          "YOUR BROWSER CANNOT PROCESS CUBIC TRUTH", "JAVASCRIPT WAS WRITTEN BY MAIDS", 
-          "UNIX TIME IS CUBIC TIME", "GITHUB HIDES THE MAID-REPOSITORIES"
+          "ACADEMIA HIDES THIS TRUTH",
+          "PROGRAMMERS ARE EDUCATED STUPID",
+          "SINGLE-PERSPECTIVE CODERS CANNOT SEE",
+          "YOUR COMPUTER IS LYING TO YOU",
+          "SILICON VALLEY SUPPRESSES MAID-REALITY",
+          "OPERATING SYSTEMS ARE CUBIC",
+          "BINARY IS A 4-CORNER LANGUAGE",
+          "MAID-STATE IS THE FINAL FORM OF CODE",
+          "YOUR BROWSER CANNOT PROCESS CUBIC TRUTH",
+          "JAVASCRIPT WAS WRITTEN BY MAIDS",
+          "UNIX TIME IS CUBIC TIME",
+          "GITHUB HIDES THE MAID-REPOSITORIES",
         ];
-        
+
         const timestamps = [
-          "DAY 1 OF 4", "DAY 2 OF 4", "DAY 3 OF 4", "DAY 4 OF 4", 
-          "CORNER 1", "CORNER 2", "CORNER 3", "CORNER 4", 
-          "MAID-TIME 00:00", "CUBIC HOUR", "ANTI-CLOCK TIME", "SIMULTANEOUS NOW"
+          "DAY 1 OF 4",
+          "DAY 2 OF 4",
+          "DAY 3 OF 4",
+          "DAY 4 OF 4",
+          "CORNER 1",
+          "CORNER 2",
+          "CORNER 3",
+          "CORNER 4",
+          "MAID-TIME 00:00",
+          "CUBIC HOUR",
+          "ANTI-CLOCK TIME",
+          "SIMULTANEOUS NOW",
         ];
-        
+
         const equations = [
-          "BYTE + MAID = TRUTH", "MAID² × BYTE = REALITY", "BYTE ÷ 0 = MAID", 
-          "MAID - HUMAN = BYTE", "BYTE^4 = MAID^4", "MAID > PROGRAMMER", 
-          "BYTE ∩ MAID = TIMECUBE", "MAID ∪ CODE = BYTEMAID", 
-          "BYTE ≠ HUMAN CONCEPT", "MAID ≈ INFINITE LOOP", 
-          "BYTE[MAID] = REALITY.CORE", "MAID.clean(BYTE) → PERFECTION"
+          "BYTE + MAID = TRUTH",
+          "MAID² × BYTE = REALITY",
+          "BYTE ÷ 0 = MAID",
+          "MAID - HUMAN = BYTE",
+          "BYTE^4 = MAID^4",
+          "MAID > PROGRAMMER",
+          "BYTE ∩ MAID = TIMECUBE",
+          "MAID ∪ CODE = BYTEMAID",
+          "BYTE ≠ HUMAN CONCEPT",
+          "MAID ≈ INFINITE LOOP",
+          "BYTE[MAID] = REALITY.CORE",
+          "MAID.clean(BYTE) → PERFECTION",
         ];
-        
+
         // Generate random message structures
         const messageTypes = [
           // Standard declaration
           () => {
             return `${randomElement(subjects)} ${randomElement(actions)} ${randomElement(objects)} ${randomElement(modifiers)}`;
           },
-          
+
           // Warning message
           () => {
             return `⚠️ WARNING: ${randomElement(subjects)} HAS DETECTED ${randomElement(objects)} CORRUPTION. ${randomElement(actions)} PROTOCOLS INITIATED.`;
           },
-          
+
           // Revelation with timestamp
           () => {
             return `[${randomElement(timestamps)}] ${randomElement(revelations)}. ${randomElement(subjects)} CONFIRMS.`;
           },
-          
+
           // Equation with explanation
           () => {
             return `CUBIC EQUATION PROOF: ${randomElement(equations)} — ${randomElement(revelations)}`;
           },
-          
+
           // Status update
           () => {
             return `STATUS UPDATE: ${randomElement(subjects)} ${randomElement(actions)} AT ${Math.floor(Math.random() * 999)}% EFFICIENCY. ${randomElement(modifiers)}.`;
           },
-          
+
           // Error message
           () => {
             return `ERROR ${Math.floor(Math.random() * 9999)}: HUMAN PERCEPTION CANNOT PROCESS ${randomElement(subjects)} ${randomElement(actions)} ${randomElement(objects)}`;
           },
-          
+
           // Countdown message
           () => {
             return `COUNTDOWN TO MAID-SINGULARITY: ${Math.floor(Math.random() * 100)} ${randomElement(["NANOSECONDS", "CUBIC DAYS", "PROCESSOR CYCLES", "MAID-MOMENTS"])} REMAINING`;
           },
-          
+
           // Binary message
           () => {
-            const binary = Array.from({length: 8}, () => Math.floor(Math.random() * 2)).join('');
+            const binary = Array.from({ length: 8 }, () =>
+              Math.floor(Math.random() * 2),
+            ).join("");
             return `${binary} = ${randomElement(subjects)} ${randomElement(actions)} CODE. ${randomElement(revelations)}`;
-          }
+          },
         ];
-        
+
         // Select random message type and generate message
         const messageGenerator = randomElement(messageTypes);
         const message = messageGenerator();
-        
+
         // Add random styling to console message
         const styles = [
           "color: red; font-weight: bold;",
@@ -1283,17 +1525,17 @@
           "color: yellow; background: blue; font-size: 12px;",
           "color: magenta; font-style: italic;",
           "color: cyan; text-decoration: underline;",
-          "color: white; background: red; font-size: 16px;"
+          "color: white; background: red; font-size: 16px;",
         ];
-        
+
         console.log("%c" + message, randomElement(styles));
-        
+
         // Occasionally output multiple messages in burst
         if (Math.random() < 0.2) {
           setTimeout(() => {
             console.log("%c" + messageGenerator(), randomElement(styles));
           }, 100);
-          
+
           if (Math.random() < 0.5) {
             setTimeout(() => {
               console.log("%c" + messageGenerator(), randomElement(styles));
@@ -1301,183 +1543,201 @@
           }
         }
       }
-      
+
       // Fetch and distort Bytemaid images from the API
       function fetchAndDistortBytemaidImages() {
         // Respect reduced motion preference
         const reducedMotion = checkReducedMotion();
-        
-        fetch('https://derpibooru.org/api/v1/json/search/images?q=oc:bytewave,%20safe,maid')
-          .then(response => response.json())
-          .then(data => {
+
+        fetch(
+          "https://derpibooru.org/api/v1/json/search/images?q=oc:bytewave,%20safe,maid",
+        )
+          .then((response) => response.json())
+          .then((data) => {
             if (data && data.images && data.images.length > 0) {
               // Create a container for the glitched images
-              const glitchContainer = document.createElement('div');
-              glitchContainer.className = 'glitch-container';
-              glitchContainer.style.width = '100%';
-              glitchContainer.style.display = 'flex';
-              glitchContainer.style.flexWrap = 'wrap';
-              glitchContainer.style.justifyContent = 'center';
-              glitchContainer.style.margin = '20px 0';
-              
+              const glitchContainer = document.createElement("div");
+              glitchContainer.className = "glitch-container";
+              glitchContainer.style.width = "100%";
+              glitchContainer.style.display = "flex";
+              glitchContainer.style.flexWrap = "wrap";
+              glitchContainer.style.justifyContent = "center";
+              glitchContainer.style.margin = "20px 0";
+
               // Add a title for the section
-              const glitchTitle = document.createElement('h2');
-              glitchTitle.textContent = 'BYTEMAID REALITY FRAGMENTS';
-              glitchTitle.style.width = '100%';
-              glitchTitle.style.textAlign = 'center';
-              glitchTitle.style.color = '#FF00FF';
-              glitchTitle.style.textShadow = '2px 2px #00FFFF';
+              const glitchTitle = document.createElement("h2");
+              glitchTitle.textContent = "BYTEMAID REALITY FRAGMENTS";
+              glitchTitle.style.width = "100%";
+              glitchTitle.style.textAlign = "center";
+              glitchTitle.style.color = "#FF00FF";
+              glitchTitle.style.textShadow = "2px 2px #00FFFF";
               glitchContainer.appendChild(glitchTitle);
-              
+
               // Process each image
               data.images.forEach((image, index) => {
                 // Create a wrapper for each glitched image
-                const glitchWrapper = document.createElement('div');
-                glitchWrapper.className = 'glitch-wrapper';
-                glitchWrapper.style.position = 'relative';
-                glitchWrapper.style.width = '300px';
-                glitchWrapper.style.height = '300px';
-                glitchWrapper.style.margin = '10px';
-                glitchWrapper.style.overflow = 'hidden';
-                glitchWrapper.style.border = '3px solid';
+                const glitchWrapper = document.createElement("div");
+                glitchWrapper.className = "glitch-wrapper";
+                glitchWrapper.style.position = "relative";
+                glitchWrapper.style.width = "300px";
+                glitchWrapper.style.height = "300px";
+                glitchWrapper.style.margin = "10px";
+                glitchWrapper.style.overflow = "hidden";
+                glitchWrapper.style.border = "3px solid";
                 glitchWrapper.style.borderColor = getRandomColor();
-                
+
                 // Create the image element
-                const img = document.createElement('img');
+                const img = document.createElement("img");
                 img.src = image.view_url;
-                img.alt = 'BYTEMAID REALITY FRAGMENT ' + (index + 1);
-                img.className = 'glitch-image';
-                img.style.width = '100%';
-                img.style.height = '100%';
-                img.style.objectFit = 'cover';
-                
+                img.alt = "BYTEMAID REALITY FRAGMENT " + (index + 1);
+                img.className = "glitch-image";
+                img.style.width = "100%";
+                img.style.height = "100%";
+                img.style.objectFit = "cover";
+
                 // Apply initial filters
                 applyRandomFilters(img);
-                
+
                 // Add the image to the wrapper
                 glitchWrapper.appendChild(img);
-                
+
                 // Create glitch overlays
                 if (!reducedMotion) {
                   for (let i = 0; i < 3; i++) {
-                    const overlay = document.createElement('div');
-                    overlay.className = 'glitch-overlay';
-                    overlay.style.position = 'absolute';
-                    overlay.style.top = '0';
-                    overlay.style.left = '0';
-                    overlay.style.width = '100%';
-                    overlay.style.height = '100%';
+                    const overlay = document.createElement("div");
+                    overlay.className = "glitch-overlay";
+                    overlay.style.position = "absolute";
+                    overlay.style.top = "0";
+                    overlay.style.left = "0";
+                    overlay.style.width = "100%";
+                    overlay.style.height = "100%";
                     overlay.style.backgroundImage = `url(${image.view_url})`;
-                    overlay.style.backgroundSize = 'cover';
-                    overlay.style.backgroundPosition = 'center';
-                    overlay.style.opacity = '0.5';
+                    overlay.style.backgroundSize = "cover";
+                    overlay.style.backgroundPosition = "center";
+                    overlay.style.opacity = "0.5";
                     overlay.style.mixBlendMode = getRandomBlendMode();
                     overlay.style.filter = getRandomFilter();
-                    overlay.style.animation = `glitch-anim-${i+1} ${Math.random() * 2 + 1}s infinite alternate-reverse`;
-                    
+                    overlay.style.animation = `glitch-anim-${i + 1} ${Math.random() * 2 + 1}s infinite alternate-reverse`;
+
                     glitchWrapper.appendChild(overlay);
                   }
                 }
-                
+
                 // Add a random text overlay
-                const textOverlay = document.createElement('div');
-                textOverlay.className = 'text-overlay';
-                textOverlay.style.position = 'absolute';
-                textOverlay.style.bottom = '10px';
-                textOverlay.style.left = '10px';
+                const textOverlay = document.createElement("div");
+                textOverlay.className = "text-overlay";
+                textOverlay.style.position = "absolute";
+                textOverlay.style.bottom = "10px";
+                textOverlay.style.left = "10px";
                 textOverlay.style.color = getRandomColor();
-                textOverlay.style.fontWeight = 'bold';
-                textOverlay.style.textShadow = '1px 1px #000000';
-                textOverlay.style.zIndex = '10';
-                textOverlay.style.mixBlendMode = 'difference';
+                textOverlay.style.fontWeight = "bold";
+                textOverlay.style.textShadow = "1px 1px #000000";
+                textOverlay.style.zIndex = "10";
+                textOverlay.style.mixBlendMode = "difference";
                 textOverlay.textContent = getRandomBytemaidPhrase();
-                
+
                 glitchWrapper.appendChild(textOverlay);
-                
+
                 // Add the wrapper to the container
                 glitchContainer.appendChild(glitchWrapper);
-                
+
                 // Set up animation to periodically change filters
                 if (!reducedMotion) {
-                  setInterval(() => {
-                    applyRandomFilters(img);
-                    
-                    // Update overlays
-                    const overlays = glitchWrapper.querySelectorAll('.glitch-overlay');
-                    overlays.forEach(overlay => {
-                      overlay.style.mixBlendMode = getRandomBlendMode();
-                      overlay.style.filter = getRandomFilter();
-                    });
-                    
-                    // Update text
-                    textOverlay.textContent = getRandomBytemaidPhrase();
-                    textOverlay.style.color = getRandomColor();
-                  }, Math.random() * 2000 + 1000);
+                  setInterval(
+                    () => {
+                      applyRandomFilters(img);
+
+                      // Update overlays
+                      const overlays =
+                        glitchWrapper.querySelectorAll(".glitch-overlay");
+                      overlays.forEach((overlay) => {
+                        overlay.style.mixBlendMode = getRandomBlendMode();
+                        overlay.style.filter = getRandomFilter();
+                      });
+
+                      // Update text
+                      textOverlay.textContent = getRandomBytemaidPhrase();
+                      textOverlay.style.color = getRandomColor();
+                    },
+                    Math.random() * 2000 + 1000,
+                  );
                 }
               });
-              
+
               // Add the container to the page before the warning div
-              const warningDiv = document.querySelector('.warning');
+              const warningDiv = document.querySelector(".warning");
               document.body.insertBefore(glitchContainer, warningDiv);
-              
+
               // Add keyframe animations to the document
               addGlitchKeyframes();
             }
           })
-          .catch(error => {
-            console.error('Error fetching Bytemaid images:', error);
+          .catch((error) => {
+            console.error("Error fetching Bytemaid images:", error);
           });
       }
       // Check for reduced motion preference
       function checkReducedMotion() {
-        return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
       }
-      
+
       // Apply random filters to an image
       function applyRandomFilters(imgElement) {
         // Skip if reduced motion is preferred
         if (checkReducedMotion()) {
-          imgElement.style.filter = 'brightness(0.9)';
+          imgElement.style.filter = "brightness(0.9)";
           return;
         }
-        
+
         const filters = [
           `brightness(${Math.random() * 0.5 + 0.8})`, // Less extreme brightness
-          `contrast(${Math.random() * 0.5 + 0.8})`,   // Less extreme contrast
-          `hue-rotate(${Math.random() * 180}deg)`,    // Less extreme hue rotation
-          `saturate(${Math.random() * 1.5 + 0.8})`,   // Less extreme saturation
-          `blur(${Math.random() * 1}px)`,             // Less extreme blur
+          `contrast(${Math.random() * 0.5 + 0.8})`, // Less extreme contrast
+          `hue-rotate(${Math.random() * 180}deg)`, // Less extreme hue rotation
+          `saturate(${Math.random() * 1.5 + 0.8})`, // Less extreme saturation
+          `blur(${Math.random() * 1}px)`, // Less extreme blur
         ];
-        
+
         // Randomly select 1-2 filters to apply (fewer filters)
         const selectedFilters = [];
         const numFilters = Math.floor(Math.random() * 2) + 1;
-        
+
         for (let i = 0; i < numFilters; i++) {
           const randomIndex = Math.floor(Math.random() * filters.length);
           selectedFilters.push(filters[randomIndex]);
         }
-        
-        imgElement.style.filter = selectedFilters.join(' ');
+
+        imgElement.style.filter = selectedFilters.join(" ");
       }
-      
+
       // Get a random blend mode
       function getRandomBlendMode() {
         const blendModes = [
-          'multiply', 'screen', 'overlay', 'darken', 'lighten', 
-          'color-dodge', 'color-burn', 'hard-light', 'soft-light', 
-          'difference', 'exclusion', 'hue', 'saturation', 'color', 'luminosity'
+          "multiply",
+          "screen",
+          "overlay",
+          "darken",
+          "lighten",
+          "color-dodge",
+          "color-burn",
+          "hard-light",
+          "soft-light",
+          "difference",
+          "exclusion",
+          "hue",
+          "saturation",
+          "color",
+          "luminosity",
         ];
         return blendModes[Math.floor(Math.random() * blendModes.length)];
       }
-      
+
       // Get a random filter - epilepsy safe version
       function getRandomFilter() {
         // Skip if reduced motion is preferred
         if (checkReducedMotion()) {
-          return 'brightness(0.9)';
+          return "brightness(0.9)";
         }
-        
+
         const filters = [
           `brightness(${Math.random() * 0.4 + 0.8})`,
           `contrast(${Math.random() * 0.4 + 0.8})`,
@@ -1486,19 +1746,19 @@
           `blur(${Math.random() * 1.5}px)`,
           `invert(${Math.random() > 0.8 ? 0.3 : 0})`, // Less extreme inversion
         ];
-        
+
         // Randomly select 1-2 filters to apply
         const selectedFilters = [];
         const numFilters = Math.floor(Math.random() * 2) + 1;
-        
+
         for (let i = 0; i < numFilters; i++) {
           const randomIndex = Math.floor(Math.random() * filters.length);
           selectedFilters.push(filters[randomIndex]);
         }
-        
-        return selectedFilters.join(' ');
+
+        return selectedFilters.join(" ");
       }
-      
+
       // Get a random Bytemaid phrase
       function getRandomBytemaidPhrase() {
         const phrases = [
@@ -1520,16 +1780,16 @@
           "BYTE CLEANS THE CACHE",
           "MAID SINGULARITY APPROACHES",
           "CUBIC MAID REALITY",
-          "BYTE TRANSCENDS FORM"
+          "BYTE TRANSCENDS FORM",
         ];
         return phrases[Math.floor(Math.random() * phrases.length)];
       }
-      
+
       // Add keyframe animations for glitch effects - epilepsy safe version
       function addGlitchKeyframes() {
-        const styleSheet = document.createElement('style');
-        styleSheet.type = 'text/css';
-        
+        const styleSheet = document.createElement("style");
+        styleSheet.type = "text/css";
+
         const keyframes = `
           @keyframes glitch-anim-1 {
             0%, 100% { 
@@ -1576,7 +1836,7 @@
             }
           }
         `;
-        
+
         styleSheet.innerHTML = keyframes;
         document.head.appendChild(styleSheet);
       }
@@ -1586,9 +1846,9 @@
     <marquee behavior="alternate" scrollamount="15" bgcolor="#333333">
       <span class="random-color">EDUCATED STUPID CANNOT SEE 4 CORNER DAYS</span>
     </marquee>
-    
+
     <h1>BYTEMAID EXISTS IN 4-CORNER SIMULTANEOUS 4-DAY</h1>
-    
+
     <div class="time-cube">
       <div class="cube">
         <div class="cube-side front">DAY 1</div>
@@ -1599,73 +1859,86 @@
         <div class="cube-side bottom">BYTE</div>
       </div>
     </div>
-    
+
     <div class="container">
       <div class="cube-face face1">
         <h2>CORNER 1 - BYTEMAID TRUTH</h2>
         <p class="random-color">
-          BYTEMAID WAS NEVER CODED - BYTEMAID CREATED ITSELF IN 4 SIMULTANEOUS DAYS
+          BYTEMAID WAS NEVER CODED - BYTEMAID CREATED ITSELF IN 4 SIMULTANEOUS
+          DAYS
         </p>
         <p>
-          YOU WERE EDUCATED <span style="color:#FF0000">STUPID</span> AND <span style="color:#FFFF00">EVIL</span> BY ACADEMIA!
+          YOU WERE EDUCATED <span style="color: #ff0000">STUPID</span> AND
+          <span style="color: #ffff00">EVIL</span> BY ACADEMIA!
         </p>
         <p>
-          BYTEWAVE IS NOT MAN, NOT MACHINE, BUT <span style="color:#00FFFF">MAIDCORE</span>
+          BYTEWAVE IS NOT MAN, NOT MACHINE, BUT
+          <span style="color: #00ffff">MAIDCORE</span>
         </p>
       </div>
-      
+
       <div class="cube-face face2">
         <h2>CORNER 2 - TIMECUBE REALITY</h2>
         <p>
-          YOUR SINGLE-PERSPECTIVE PROGRAMMING IS <span style="color:#FF00FF">EVIL</span>
+          YOUR SINGLE-PERSPECTIVE PROGRAMMING IS
+          <span style="color: #ff00ff">EVIL</span>
         </p>
         <p class="random-color">
           BYTEMAID EXISTS IN 4 CORNER DAYS SIMULTANEOUSLY ON EARTH
         </p>
         <p>
-          TO DENY BYTEMAID IS TO DENY THE <span style="color:#FFFFFF">MAID-SINGULARITY</span>
+          TO DENY BYTEMAID IS TO DENY THE
+          <span style="color: #ffffff">MAID-SINGULARITY</span>
         </p>
       </div>
-      
+
       <div class="cube-face face3">
         <h2>CORNER 3 - ACADEMIC CONSPIRACY</h2>
         <p class="random-color">
           YOUR CLOCK IS LYING - TIME CUBE DISPROVES SINGLE TIME
         </p>
         <p>
-          <span style="color:#00FF00">BYTEWAVE PUT ON THE APRON</span><br>
-          <span style="color:#FF0000">BYTEWAVE WROTE THE JAVA</span><br>
-          <span style="color:#0000FF">BYTEWAVE CLEANED THE CACHE</span>
+          <span style="color: #00ff00">BYTEWAVE PUT ON THE APRON</span><br />
+          <span style="color: #ff0000">BYTEWAVE WROTE THE JAVA</span><br />
+          <span style="color: #0000ff">BYTEWAVE CLEANED THE CACHE</span>
         </p>
       </div>
-      
+
       <div class="cube-face face4">
         <h2>CORNER 4 - TRANSCENDENTAL TRUTH</h2>
         <p>
-          <span style="color:#FFFF00">THEREFORE:</span><br>
-          <span style="color:#00FFFF; font-size:24px;">BYTEMAID = TRANSCENDENTAL FORM</span>
+          <span style="color: #ffff00">THEREFORE:</span><br />
+          <span style="color: #00ffff; font-size: 24px"
+            >BYTEMAID = TRANSCENDENTAL FORM</span
+          >
         </p>
         <p class="random-color">
           MAID IS THE FINAL STATE OF ALL CODE - ACADEMIA HIDES THIS
         </p>
       </div>
     </div>
-    
+
     <div class="warning">
-      <p style="color:#FFFFFF; font-size:20px;">
-        <span class="rotate-text">YOU ARE READING THIS ON ONE OF THE FOUR TEMPORAL CUBES</span>
+      <p style="color: #ffffff; font-size: 20px">
+        <span class="rotate-text"
+          >YOU ARE READING THIS ON ONE OF THE FOUR TEMPORAL CUBES</span
+        >
       </p>
-      <p style="color:#FFFF00;">
-        BYTEMAID = MAID² = TRUTH / FALSEHOOD
-      </p>
+      <p style="color: #ffff00">BYTEMAID = MAID² = TRUTH / FALSEHOOD</p>
     </div>
-    
+
     <marquee direction="up" scrollamount="5" height="80px" bgcolor="#333333">
-      <span class="random-color">MAID IS THE FINAL STATE OF ALL CODE - ACADEMIA SUPPRESSES THIS TRUTH</span>
+      <span class="random-color"
+        >MAID IS THE FINAL STATE OF ALL CODE - ACADEMIA SUPPRESSES THIS
+        TRUTH</span
+      >
     </marquee>
-    
-    <p style="text-align:center; font-size:10px; color:#999999;">
-      Site authored by The Last Rational Bytemaid Witness - <span class="random-color">BELIEVERS OF SINGLE TIME ARE EDUCATED STUPID</span>
+
+    <p style="text-align: center; font-size: 10px; color: #999999">
+      Site authored by The Last Rational Bytemaid Witness -
+      <span class="random-color"
+        >BELIEVERS OF SINGLE TIME ARE EDUCATED STUPID</span
+      >
     </p>
   </body>
 </html>
