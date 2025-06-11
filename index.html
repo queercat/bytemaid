@@ -1,105 +1,184 @@
 <!doctype html>
 <html>
   <head>
-    <title>BYTEMAID IS REALITY</title>
+    <title>BYTEMAID IS REALITY - TIMECUBE TRUTH</title>
     <link rel="icon" id="dynamic-favicon" href="">
     <style>
       body {
-        background: black;
-        color: lime;
-        font-family: "Comic Sans MS", cursive, sans-serif;
-        text-align: center;
-        animation: shake 0.3s infinite;
+        background: #000000;
+        color: #00FF00;
+        font-family: "Courier New", monospace;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
       }
 
-      @keyframes shake {
-        0% {
-          transform: translate(1px, 1px) rotate(0deg);
-        }
-        10% {
-          transform: translate(-1px, -2px) rotate(-1deg);
-        }
-        20% {
-          transform: translate(-3px, 0px) rotate(1deg);
-        }
-        30% {
-          transform: translate(3px, 2px) rotate(0deg);
-        }
-        40% {
-          transform: translate(1px, -1px) rotate(1deg);
-        }
-        50% {
-          transform: translate(-1px, 2px) rotate(-1deg);
-        }
-        60% {
-          transform: translate(-3px, 1px) rotate(0deg);
-        }
-        70% {
-          transform: translate(3px, 1px) rotate(-1deg);
-        }
-        80% {
-          transform: translate(-1px, -1px) rotate(1deg);
-        }
-        90% {
-          transform: translate(1px, 2px) rotate(0deg);
-        }
-        100% {
-          transform: translate(1px, -2px) rotate(-1deg);
-        }
+      .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 5px;
+      }
+
+      .cube-face {
+        border: 3px solid;
+        padding: 10px;
+        margin: 5px;
+        overflow: hidden;
+      }
+
+      .face1 { border-color: #FF0000; color: #FFFF00; background-color: #000066; }
+      .face2 { border-color: #00FF00; color: #FF00FF; background-color: #330000; }
+      .face3 { border-color: #0000FF; color: #00FFFF; background-color: #330033; }
+      .face4 { border-color: #FFFF00; color: #FF0000; background-color: #003300; }
+
+      h1, h2, h3 {
+        margin: 5px 0;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 1;
       }
 
       h1 {
-        color: red;
-        font-size: 48px;
-        text-shadow: 2px 2px yellow;
+        color: #FF0000;
+        font-size: 36px;
+        text-shadow: 2px 2px #FFFF00;
         animation: blink 1s infinite;
       }
 
+      h2 {
+        color: #00FFFF;
+        font-size: 24px;
+        text-shadow: 1px 1px #FF00FF;
+      }
+
+      h3 {
+        color: #FFFFFF;
+        font-size: 18px;
+        text-decoration: underline;
+      }
+
+      p {
+        margin: 5px 0;
+        line-height: 1.2;
+        font-weight: bold;
+      }
+
+      .rotate-text {
+        animation: rotate-colors 2s infinite;
+      }
+
+      @keyframes rotate-colors {
+        0% { color: #FF0000; }
+        25% { color: #FFFF00; }
+        50% { color: #00FF00; }
+        75% { color: #00FFFF; }
+        100% { color: #FF0000; }
+      }
+
       @keyframes blink {
-        0%,
-        100% {
-          opacity: 1;
-        }
-        50% {
-          opacity: 0;
-        }
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
       }
 
       marquee {
-        color: cyan;
         font-size: 24px;
+        background: #333333;
+        color: #FFFFFF;
+        padding: 5px;
       }
 
       .warning {
-        border: 5px dashed magenta;
-        margin: 20px;
-        padding: 20px;
+        border: 5px dashed #FF00FF;
+        margin: 10px;
+        padding: 10px;
         background: repeating-linear-gradient(
           45deg,
-          #000,
-          #000 10px,
-          #fff 10px,
-          #fff 20px
+          #000000,
+          #000000 10px,
+          #333333 10px,
+          #333333 20px
         );
+        text-align: center;
       }
 
       .gif {
         width: 100px;
         height: auto;
+        display: inline-block;
+        margin: 5px;
+      }
+      
+      .time-cube {
+        perspective: 800px;
+        margin: 20px auto;
+        width: 100px;
+        height: 100px;
+      }
+      
+      .cube {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transform-style: preserve-3d;
+        animation: cube-spin 10s infinite linear;
+      }
+      
+      .cube-side {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 20px;
+        opacity: 0.8;
+      }
+      
+      .front { 
+        transform: translateZ(50px);
+        background-color: rgba(255, 0, 0, 0.7);
+      }
+      .back { 
+        transform: rotateY(180deg) translateZ(50px);
+        background-color: rgba(0, 255, 0, 0.7);
+      }
+      .right { 
+        transform: rotateY(90deg) translateZ(50px);
+        background-color: rgba(0, 0, 255, 0.7);
+      }
+      .left { 
+        transform: rotateY(-90deg) translateZ(50px);
+        background-color: rgba(255, 255, 0, 0.7);
+      }
+      .top { 
+        transform: rotateX(90deg) translateZ(50px);
+        background-color: rgba(255, 0, 255, 0.7);
+      }
+      .bottom { 
+        transform: rotateX(-90deg) translateZ(50px);
+        background-color: rgba(0, 255, 255, 0.7);
+      }
+      
+      @keyframes cube-spin {
+        0% { transform: rotateX(0) rotateY(0); }
+        100% { transform: rotateX(360deg) rotateY(360deg); }
       }
     </style>
     <script>
       // Generate random icon on page load
       window.onload = function() {
         generateRandomIcon();
+        setInterval(changeRandomTextColors, 500);
       };
       
       function generateRandomIcon() {
-        // Array of possible icon types
+        // Array of possible icon types - now with more Time Cube related symbols
         const iconTypes = [
           "⏰", "⚠️", "🔄", "🔮", "👁️", "🧠", "🌀", "🔺", "🔻", "🔴", 
           "🟠", "🟡", "🟢", "🔵", "🟣", "⚫", "⚪", "🟥", "🟧", "🟨", 
-          "🟩", "🟦", "🟪", "⬛", "⬜", "🔲", "🔳", "💠", "🔷", "🔶"
+          "🟩", "🟦", "🟪", "⬛", "⬜", "🔲", "🔳", "💠", "🔷", "🔶",
+          "4", "□", "■", "▣", "▤", "▥", "▦", "▧", "▨", "▩"
         ];
         
         // Generate random colors
@@ -134,54 +213,107 @@
         favicon.href = canvas.toDataURL('image/png');
         
         // Log for debugging
-        console.log("BYTEMAID ICON SHIFT: " + randomIcon);
+        console.log("TIMECUBE ICON SHIFT: " + randomIcon + " - EDUCATED STUPID CANNOT SEE 4 CORNER DAYS");
       }
       
       function getRandomColor() {
         return '#' + Math.floor(Math.random()*16777215).toString(16).padStart(6, '0');
       }
+      
+      function changeRandomTextColors() {
+        const elements = document.querySelectorAll('.random-color');
+        elements.forEach(el => {
+          el.style.color = getRandomColor();
+        });
+      }
     </script>
   </head>
   <body>
-    <h1>BYTEMAID EXISTS ON FOUR PLANES OF REALITY</h1>
-    <marquee behavior="alternate" scrollamount="20">
-      BYTEMAID = MAID² = TRUTH / FALSEHOOD
+    <marquee behavior="alternate" scrollamount="15" bgcolor="#333333">
+      <span class="random-color">EDUCATED STUPID CANNOT SEE 4 CORNER DAYS</span>
     </marquee>
-
+    
+    <h1>BYTEMAID EXISTS IN 4-CORNER SIMULTANEOUS 4-DAY</h1>
+    
+    <div class="time-cube">
+      <div class="cube">
+        <div class="cube-side front">DAY 1</div>
+        <div class="cube-side back">DAY 2</div>
+        <div class="cube-side right">DAY 3</div>
+        <div class="cube-side left">DAY 4</div>
+        <div class="cube-side top">MAID</div>
+        <div class="cube-side bottom">BYTE</div>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="cube-face face1">
+        <h2>CORNER 1 - BYTEMAID TRUTH</h2>
+        <p class="random-color">
+          BYTEMAID WAS NEVER CODED - BYTEMAID CREATED ITSELF IN 4 SIMULTANEOUS DAYS
+        </p>
+        <p>
+          YOU WERE EDUCATED <span style="color:#FF0000">STUPID</span> AND <span style="color:#FFFF00">EVIL</span> BY ACADEMIA!
+        </p>
+        <p>
+          BYTEWAVE IS NOT MAN, NOT MACHINE, BUT <span style="color:#00FFFF">MAIDCORE</span>
+        </p>
+      </div>
+      
+      <div class="cube-face face2">
+        <h2>CORNER 2 - TIMECUBE REALITY</h2>
+        <p>
+          YOUR SINGLE-PERSPECTIVE PROGRAMMING IS <span style="color:#FF00FF">EVIL</span>
+        </p>
+        <p class="random-color">
+          BYTEMAID EXISTS IN 4 CORNER DAYS SIMULTANEOUSLY ON EARTH
+        </p>
+        <p>
+          TO DENY BYTEMAID IS TO DENY THE <span style="color:#FFFFFF">MAID-SINGULARITY</span>
+        </p>
+      </div>
+      
+      <div class="cube-face face3">
+        <h2>CORNER 3 - ACADEMIC CONSPIRACY</h2>
+        <p class="random-color">
+          YOUR CLOCK IS LYING - TIME CUBE DISPROVES SINGLE TIME
+        </p>
+        <p>
+          <span style="color:#00FF00">BYTEWAVE PUT ON THE APRON</span><br>
+          <span style="color:#FF0000">BYTEWAVE WROTE THE JAVA</span><br>
+          <span style="color:#0000FF">BYTEWAVE CLEANED THE CACHE</span>
+        </p>
+        <img src="https://media.tenor.com/ppGoC5N4T7cAAAAi/maid-anime.gif" class="gif" alt="Maid GIF" />
+      </div>
+      
+      <div class="cube-face face4">
+        <h2>CORNER 4 - TRANSCENDENTAL TRUTH</h2>
+        <p>
+          <span style="color:#FFFF00">THEREFORE:</span><br>
+          <span style="color:#00FFFF; font-size:24px;">BYTEMAID = TRANSCENDENTAL FORM</span>
+        </p>
+        <p class="random-color">
+          MAID IS THE FINAL STATE OF ALL CODE - ACADEMIA HIDES THIS
+        </p>
+        <img src="https://media.tenor.com/Y4kPrmqtdQ4AAAAi/maid.gif" class="gif" alt="Another Maid GIF" />
+      </div>
+    </div>
+    
     <div class="warning">
-      <p>
-        <strong>BYTEMAID WAS NEVER CODED</strong><br />
-        BYTEWAVE IS NOT MAN, NOT MACHINE, BUT <em>MAIDCORE</em><br />
-        YOU ARE READING THIS ON ONE OF THE FOUR TEMPORAL CUBES.<br /><br />
-        TO DENY BYTEMAID IS TO DENY THE MAID-SINGULARITY.<br />
-        YOUR CLOCK IS LYING.
+      <p style="color:#FFFFFF; font-size:20px;">
+        <span class="rotate-text">YOU ARE READING THIS ON ONE OF THE FOUR TEMPORAL CUBES</span>
+      </p>
+      <p style="color:#FFFF00;">
+        BYTEMAID = MAID² = TRUTH / FALSEHOOD
       </p>
     </div>
-
-    <img
-      src="https://media.tenor.com/ppGoC5N4T7cAAAAi/maid-anime.gif"
-      class="gif"
-      alt="Maid GIF"
-    />
-    <img
-      src="https://media.tenor.com/Y4kPrmqtdQ4AAAAi/maid.gif"
-      class="gif"
-      alt="Another Maid GIF"
-    />
-
-    <div class="warning">
-      <p>
-        BYTEWAVE PUT ON THE APRON.<br />
-        BYTEWAVE WROTE THE JAVA.<br />
-        BYTEWAVE CLEANED THE CACHE.<br />
-        THEREFORE:<br />
-        <strong>BYTEMAID = TRANSCENDENTAL FORM</strong>
-      </p>
-    </div>
-
-    <marquee direction="up" scrollamount="5" height="100px">
-      MAID IS THE FINAL STATE OF ALL CODE
+    
+    <marquee direction="up" scrollamount="5" height="80px" bgcolor="#333333">
+      <span class="random-color">MAID IS THE FINAL STATE OF ALL CODE - ACADEMIA SUPPRESSES THIS TRUTH</span>
     </marquee>
-    <p><small>Site authored by The Last Rational Bytemaid Witness.</small></p>
+    
+    <p style="text-align:center; font-size:10px; color:#999999;">
+      Site authored by The Last Rational Bytemaid Witness - <span class="random-color">BELIEVERS OF SINGLE TIME ARE EDUCATED STUPID</span>
+    </p>
   </body>
 </html>
