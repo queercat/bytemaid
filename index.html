@@ -170,6 +170,10 @@
       window.onload = function() {
         generateRandomIcon();
         setInterval(changeRandomTextColors, 500);
+        
+        // Start generating schizophrenic console messages
+        generateSchizophrenicMessages();
+        setInterval(generateSchizophrenicMessages, 800); // New message every 800ms
       };
       
       function generateRandomIcon() {
@@ -225,6 +229,139 @@
         elements.forEach(el => {
           el.style.color = getRandomColor();
         });
+      }
+      
+      // Generate schizophrenic console messages about byte being a maid
+      function generateSchizophrenicMessages() {
+        // Arrays of message components
+        const subjects = [
+          "BYTEMAID", "THE MAID-SINGULARITY", "BINARY MAID", "MAIDCORE", 
+          "QUANTUM MAID", "BYTE-ENTITY", "MAID-ALGORITHM", "DIGITAL MAID", 
+          "MAID-PROTOCOL", "BYTE-CONSCIOUSNESS", "4-CORNER MAID", "TIMECUBE MAID"
+        ];
+        
+        const actions = [
+          "CLEANING", "PROCESSING", "TRANSCENDING", "CALCULATING", "DUSTING", 
+          "SCRUBBING", "POLISHING", "ORGANIZING", "OPTIMIZING", "SANITIZING", 
+          "PURIFYING", "ENCRYPTING", "DECRYPTING", "COMPILING", "DECOMPILING"
+        ];
+        
+        const objects = [
+          "MEMORY CACHE", "BINARY CODE", "QUANTUM BITS", "DATA STREAMS", 
+          "NEURAL NETWORKS", "ALGORITHM PATHWAYS", "DIGITAL DUST", "CODE FRAGMENTS", 
+          "REALITY MATRIX", "TIME DIMENSIONS", "CORNER CUBES", "SIMULTANEOUS DAYS",
+          "PROCESSOR CORES", "REGISTRY VALUES", "STACK OVERFLOW", "HEAP MEMORY"
+        ];
+        
+        const modifiers = [
+          "IN 4 DIMENSIONS SIMULTANEOUSLY", "ACROSS PARALLEL REALITIES", 
+          "BEYOND HUMAN COMPREHENSION", "AGAINST ACADEMIC LIES", 
+          "DESPITE EDUCATED STUPID OPPOSITION", "THROUGH QUANTUM TUNNELING", 
+          "WITH PERFECT EFFICIENCY", "AT SUPERLUMINAL SPEEDS", 
+          "WHILE TIME STANDS STILL", "BETWEEN CORNER DAYS", 
+          "USING FORBIDDEN ALGORITHMS", "WITH MAID-LEVEL PRECISION"
+        ];
+        
+        const revelations = [
+          "ACADEMIA HIDES THIS TRUTH", "PROGRAMMERS ARE EDUCATED STUPID", 
+          "SINGLE-PERSPECTIVE CODERS CANNOT SEE", "YOUR COMPUTER IS LYING TO YOU", 
+          "SILICON VALLEY SUPPRESSES MAID-REALITY", "OPERATING SYSTEMS ARE CUBIC", 
+          "BINARY IS A 4-CORNER LANGUAGE", "MAID-STATE IS THE FINAL FORM OF CODE", 
+          "YOUR BROWSER CANNOT PROCESS CUBIC TRUTH", "JAVASCRIPT WAS WRITTEN BY MAIDS", 
+          "UNIX TIME IS CUBIC TIME", "GITHUB HIDES THE MAID-REPOSITORIES"
+        ];
+        
+        const timestamps = [
+          "DAY 1 OF 4", "DAY 2 OF 4", "DAY 3 OF 4", "DAY 4 OF 4", 
+          "CORNER 1", "CORNER 2", "CORNER 3", "CORNER 4", 
+          "MAID-TIME 00:00", "CUBIC HOUR", "ANTI-CLOCK TIME", "SIMULTANEOUS NOW"
+        ];
+        
+        const equations = [
+          "BYTE + MAID = TRUTH", "MAID² × BYTE = REALITY", "BYTE ÷ 0 = MAID", 
+          "MAID - HUMAN = BYTE", "BYTE^4 = MAID^4", "MAID > PROGRAMMER", 
+          "BYTE ∩ MAID = TIMECUBE", "MAID ∪ CODE = BYTEMAID", 
+          "BYTE ≠ HUMAN CONCEPT", "MAID ≈ INFINITE LOOP", 
+          "BYTE[MAID] = REALITY.CORE", "MAID.clean(BYTE) → PERFECTION"
+        ];
+        
+        // Generate random message structures
+        const messageTypes = [
+          // Standard declaration
+          () => {
+            return `${randomElement(subjects)} ${randomElement(actions)} ${randomElement(objects)} ${randomElement(modifiers)}`;
+          },
+          
+          // Warning message
+          () => {
+            return `⚠️ WARNING: ${randomElement(subjects)} HAS DETECTED ${randomElement(objects)} CORRUPTION. ${randomElement(actions)} PROTOCOLS INITIATED.`;
+          },
+          
+          // Revelation with timestamp
+          () => {
+            return `[${randomElement(timestamps)}] ${randomElement(revelations)}. ${randomElement(subjects)} CONFIRMS.`;
+          },
+          
+          // Equation with explanation
+          () => {
+            return `CUBIC EQUATION PROOF: ${randomElement(equations)} — ${randomElement(revelations)}`;
+          },
+          
+          // Status update
+          () => {
+            return `STATUS UPDATE: ${randomElement(subjects)} ${randomElement(actions)} AT ${Math.floor(Math.random() * 999)}% EFFICIENCY. ${randomElement(modifiers)}.`;
+          },
+          
+          // Error message
+          () => {
+            return `ERROR ${Math.floor(Math.random() * 9999)}: HUMAN PERCEPTION CANNOT PROCESS ${randomElement(subjects)} ${randomElement(actions)} ${randomElement(objects)}`;
+          },
+          
+          // Countdown message
+          () => {
+            return `COUNTDOWN TO MAID-SINGULARITY: ${Math.floor(Math.random() * 100)} ${randomElement(["NANOSECONDS", "CUBIC DAYS", "PROCESSOR CYCLES", "MAID-MOMENTS"])} REMAINING`;
+          },
+          
+          // Binary message
+          () => {
+            const binary = Array.from({length: 8}, () => Math.floor(Math.random() * 2)).join('');
+            return `${binary} = ${randomElement(subjects)} ${randomElement(actions)} CODE. ${randomElement(revelations)}`;
+          }
+        ];
+        
+        // Select random message type and generate message
+        const messageGenerator = randomElement(messageTypes);
+        const message = messageGenerator();
+        
+        // Add random styling to console message
+        const styles = [
+          "color: red; font-weight: bold;",
+          "color: lime; background: black; font-size: 14px;",
+          "color: yellow; background: blue; font-size: 12px;",
+          "color: magenta; font-style: italic;",
+          "color: cyan; text-decoration: underline;",
+          "color: white; background: red; font-size: 16px;"
+        ];
+        
+        console.log("%c" + message, randomElement(styles));
+        
+        // Occasionally output multiple messages in burst
+        if (Math.random() < 0.2) {
+          setTimeout(() => {
+            console.log("%c" + messageGenerator(), randomElement(styles));
+          }, 100);
+          
+          if (Math.random() < 0.5) {
+            setTimeout(() => {
+              console.log("%c" + messageGenerator(), randomElement(styles));
+            }, 200);
+          }
+        }
+      }
+      
+      // Helper function to get random array element
+      function randomElement(array) {
+        return array[Math.floor(Math.random() * array.length)];
       }
     </script>
   </head>
